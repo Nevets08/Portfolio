@@ -1,0 +1,327 @@
+body {
+    font-family: roboto;
+}
+
+/* MENU */
+
+#menu {
+    background-color: #4f9cd0;
+}
+
+#menu .nav-item a {
+    font-size: 20px;
+    color: #fff;
+}
+
+/* FOND BLEU */ 
+
+#fondbleu {
+    background-color: #4f9cd0;
+}
+
+#fondbleu h1, #fondbleu h2 {
+    font-size: 100px;
+    color: #fff;
+}
+
+#fondbleu button {
+    background-color: #1b85cd;
+    color: #fff;
+    font-size: 25px;
+    width: 350px;
+    height: 70px;
+    border-radius: 50px;
+}
+    
+/* mettre un box shadow au btn */
+
+#fondbleu button:hover {
+
+}
+
+/* Carte dev des etu */
+
+.row .card {
+    border: none;
+}
+
+.row h5 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#cartes .developper img {
+    margin-left: 20px;
+}
+
+/* TOUS LES TITRES */
+
+.GrandTitre h1 {
+    font-size: 80px;
+    font-weight: bold;
+}
+
+.GrandTitre p {
+    font-size: 25px;
+}
+
+.GrandTitre p.tirets {
+    font-size: 100px;
+    font-weight: bold;
+    color: #1b85cd;
+}
+
+#Apropos .GrandTitre p.tirets {
+    font-size: 100px;
+    font-weight: bold;
+    color: #1b85cd;
+}
+
+/* A PROPOS GAUCHE */
+
+#Apropos button.gauche {
+    background-color: #4f9cd0;
+    color: #fff;
+    font-size: 25px;
+    width: 254px;
+    height: 51px;
+    border-radius: 50px;
+}
+
+#Apropos p {
+    font-size: 22px;
+}
+
+/* A PROPOS DROITE */
+
+#Apropos .titre {
+    background-color: #0c2e44;
+    color: #fff;
+}
+
+#Apropos .titre h2 {
+    font-size: 25px;
+}
+
+#Apropos h3 {
+    font-size: 22px;
+}
+
+#Apropos .utilisation p:first-child {
+    background-color: #1b85cd;
+    font-size: 22px;
+    height: 40px;
+}
+
+#Apropos .card button.droite {
+    font-size: 22px;
+    background-color: #1b85cd;
+    width: 70%;
+    color: #fff;
+}
+
+#Apropos .card {
+    background-color: #4f9cd0;
+    color: #fff;
+}
+
+#Apropos .pouvoir p, #Apropos .pouvoir h4, #Apropos .pouvoir li  {
+    font-size: 14px;
+}
+
+#Apropos .gras {
+    font-weight: bold;
+}
+
+/* PORTFOLIO */
+
+.infos a img{
+    border-left: 35px solid rgba(79, 156, 208, 0.45);
+}
+
+.infos a {
+    position: relative;
+}
+
+.infos a h2 {
+    font-size: 16px;
+    writing-mode: vertical-lr;
+    position: absolute;
+    color: #fff;
+}
+
+.infos :hover {
+    
+}
+
+/* BANDEAU */
+
+#bandeau {
+    background-color: #b0d2ea;
+    opacity: 45%;
+    height: 155px;
+}
+
+#bandeau .bandeau-g, #bandeau .bandeau-d {
+    color: #fff;
+    background-color: #4f9cd0;
+    height: 60px;
+    border-radius: 20px;
+}
+
+#bandeau .bandeau-m {
+    color: #fff;
+    background-color: #1b85cd;
+    border-radius: 20px;
+    height: 60px;
+}
+
+#bandeau .bandeau-g h4, #bandeau .bandeau-g p, #bandeau .bandeau-d h4, #bandeau .bandeau-d p, #bandeau .bandeau-m h4, #bandeau .bandeau-m p {
+    font-size: 15px;
+}
+
+#bandeau .bandeau-g h4, #bandeau .bandeau-m h4, #bandeau .bandeau-d h4 {
+    font-weight: bold;
+}
+
+/* COMPETENCES */
+
+#html .progress-bar{
+    background-color: #e46643;
+}
+
+#css .progress-bar{
+    background-color: #297db5;
+}
+
+#js .progress-bar{
+    background-color: #fce37f;
+}
+
+#php .progress-bar{
+    background-color: #8a8cb3;
+}
+
+#office .progress-bar{
+    background-color: #da5a38;
+}
+
+#photoshop .progress-bar{
+    background-color: #69e6fb;
+}
+
+#anglais .progress-bar{
+    background-color: #d04556;
+}
+
+#redaction .progress-bar{
+    background-color: #4c95c7;
+}
+
+#integration .progress-bar{
+    background-color: #e46643;
+}
+
+article .progress, article .progress-bar {
+    height: 35px;
+}
+
+.progress .progress-type {
+    position: absolute;
+    font-size: 16px;
+    color: #fff;
+}
+
+.progress .progress-type .framework {
+    font-size: 10px;
+}
+
+/* PARCOURS */
+
+#parcours .border-parcours {
+    border-left: 5px solid #1b85cd;
+}
+
+#parcours h2 span {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#parcours h2 {
+    font-size: 20px;
+}
+
+#parcours h3 {
+    color: #1b85cd;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#parcours ul li {
+    font-size: 18px;
+}
+
+#parcours p.année {
+    writing-mode: vertical-lr;
+    font-size: 50px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+/* CONTACT */
+
+#contact textarea {
+    height: 71%;
+}
+
+#contact input, #contact textarea {
+    border: 1px solid #1b85cd;
+    background-color: #b0d2ea;
+    font-size: 20px;
+}
+
+#contact input {
+    width: 410px;
+    height: 50px;
+}
+
+#contact textarea {
+    width: 437px;
+    margin-bottom: 6px;
+    height: 184px;
+}
+
+#contact button[type=submit] {
+    width: 100%;
+    background-color: #1b85cd;
+    height: 50px;
+    font-size: 20px;
+}
+
+#contact a i {
+    font-size: 20px;
+    color: #1b85cd;
+}
+
+#contact a {
+    font-size: 18px;
+    color: #000;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #4f9cd0;
+    height: 46px;
+    color: #fff;
+}
+
+footer p {
+    position: relative;
+    top: 25%;
+}
+
+footer a {
+    color: #fff;
+}
+
