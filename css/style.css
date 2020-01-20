@@ -5,7 +5,7 @@ body {
 /* MENU */
 
 #menu {
-    background-color: #4f9cd0;
+    background-color: #4f9cd0;  
 }
 
 #menu .nav-item a {
@@ -16,7 +16,7 @@ body {
 /* FOND BLEU */ 
 
 #fondbleu {
-    background-color: #4f9cd0;
+    background-color: #4f9cd0; 
 }
 
 #fondbleu h1, #fondbleu h2 {
@@ -95,7 +95,7 @@ body {
 /* A PROPOS DROITE */
 
 #Apropos .titre {
-    background-color: #0c2e44;
+    background-color: #1b85cd;
     color: #fff;
 }
 
@@ -107,10 +107,10 @@ body {
     font-size: 22px;
 }
 
-#Apropos .utilisation p:first-child {
+#Apropos #utilisation p:first-child {
     background-color: #1b85cd;
     font-size: 22px;
-    height: 40px;
+    height: 44px;
 }
 
 #Apropos .card button.droite {
@@ -129,29 +129,62 @@ body {
     font-size: 14px;
 }
 
-#Apropos .gras {
+#Apropos #niveau ul li:first-child {
+    background-color: #1b85cd;
+}
+
+#Apropos #niveau ul li:nth-child(2) {
+    background-color: #fff;
+    color: #1b85cd;
+}
+
+#Apropos #niveau ul li {
+    list-style-type: none;
+    font-size: 22px;
+    width: 60px;
+    height: 40px;
+}
+
+#description ul li {
+    list-style: none;
+}
+
+#description .progress {
+    height: 12px;
+}
+
+#description .progress .progress-bar {
+    background-color: #1b85cd;
+}
+
+.border-age {
+    border: 2px solid #fff;
+}
+
+.gras {
     font-weight: bold;
 }
 
 /* PORTFOLIO */
 
-.infos a img{
+.infos a img {
     border-left: 35px solid rgba(79, 156, 208, 0.45);
-}
-
-.infos a {
-    position: relative;
 }
 
 .infos a h2 {
     font-size: 16px;
-    writing-mode: vertical-lr;
+    writing-mode: vertical-rl;
     position: absolute;
     color: #fff;
+    margin-left: 10px;
 }
 
-.infos :hover {
-    
+.infos a h2.titre1, .infos a h2.titre3, .infos a h2.titre4 {
+    margin-top: 55px;
+}
+
+.infos a h2.titre2 {
+    margin-top: 32px;
 }
 
 /* BANDEAU */
