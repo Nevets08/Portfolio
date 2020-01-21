@@ -2,12 +2,6 @@ body {
     font-family: roboto;
 }
 
-/* MENU */
-
-#menu {
-    background-color: #4f9cd0;  
-}
-
 #menu .nav-item a {
     font-size: 20px;
     color: #fff;
@@ -15,8 +9,9 @@ body {
 
 /* FOND BLEU */ 
 
-#fondbleu {
-    background-color: #4f9cd0; 
+header {
+    height: 800px;
+    background-image: url(https://i.ibb.co/Vgdjqrw/index-bg-header.png);
 }
 
 #fondbleu h1, #fondbleu h2 {
@@ -149,12 +144,21 @@ body {
     list-style: none;
 }
 
+.progression {
+    margin-top: -18px;
+}
+
 #description .progress {
     height: 12px;
+    margin-top: 13px;
 }
 
 #description .progress .progress-bar {
     background-color: #1b85cd;
+}
+
+#description img {
+    margin-top: 70px;
 }
 
 .border-age {
@@ -163,6 +167,16 @@ body {
 
 .gras {
     font-weight: bold;
+}
+
+.modal-body, .modal-footer, .modal-header {
+    background-color: #4f9cd0;
+    color: #fff;
+}
+
+.modal-footer button {
+    background-color: #1b85cd;
+    color: #fff;
 }
 
 /* PORTFOLIO */
@@ -357,4 +371,28 @@ footer p {
 footer a {
     color: #fff;
 }
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width:992px) {
+    #bandeau {
+        height: 380px;
+    }
+    #contact textarea {
+        width: 100%;
+    }
+    #contact button {
+        width: 100%;
+    }
+    #fondbleu h1, #fondbleu h2 {
+        font-size: 50px;
+    }
+}
+    
+@media screen and (max-width:1430px) {
+    #fondbleu h1, #fondbleu h2 {
+        width: 800px;
+    }
+}
+
 

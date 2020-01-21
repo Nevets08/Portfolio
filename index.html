@@ -18,64 +18,66 @@
   <!-- Mettre des sections ! -->
   <!-- Attention pour titre et tiret -> a propos dans class ! css aussi -->
 
-  <section id="menu">
-    <div class="container col-md-11">
-      <nav class="navbar navbar-expand-lg navbar-light">
-        <a href=""><img src="Graphique/Integration/logo.png" alt="Logo Steven ROBERT Developpeur Web"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
-          aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarText">
-          <ul class="navbar-nav ml-auto mt-n4">
-            <li class="nav-item">
-              <a class="nav-link" href="#">Accueil</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">A propos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Portfolio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Competences</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Parcours</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </div>
-  </section>
-
-  <section id="fondbleu">
-    <div class="container col-11">
-      <div class="row">
-        <div class="col-xl-7 col-lg-8">
-          <div class="ml-4 mt-5">
-            <h1>Développeur web</h1>
-            <h2>Webdesigner</h2>
-            <button type="button" class="btn mt-5">Faisons connaissance !</button>
+  <header>
+    <section id="menu">
+      <div class="container col-md-11">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <a href=""><img src="Graphique/Integration/logo.png" alt="Logo Steven ROBERT Developpeur Web"></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+            aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav ml-auto mt-n4">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Accueil</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">A propos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Portfolio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Competences</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Parcours</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+              </li>
+            </ul>
           </div>
-        </div>
-
-        <div class="mt-3 col-4">
-          <img src="Graphique/Integration/img-header.jpg" class="img-fluid ml-5" alt="">
-        </div>
-
+        </nav>
       </div>
-  </section>
+    </section>
+
+    <section id="fondbleu">
+      <div class="container col-11">
+        <div class="row">
+          <div class="col-xl-7 col-lg-8 col-sm-12">
+            <div class="ml-4 mt-5">
+              <h1>Développeur web</h1>
+              <h2>Webdesigner</h2>
+              <button type="button" class="btn mt-5 ml-3">Faisons connaissance !</button>
+            </div>
+          </div>
+
+          <div class="mt-3 col-4">
+            <img src="Graphique/Integration/img-header.jpg" class="img-fluid ml-5" alt="">
+          </div>
+
+        </div>
+    </section>
+  </header>
 
   <!-- Carte dev des etu -->
 
   <section id="cartes">
     <div class="container mt-5 mb-5">
       <div class="row d-flex justify-content-center">
-        <div class="col-3">
+        <div class="col-xl-3 col-sm-12">
           <div class="card text-center">
             <div class="developper card-body">
               <img src="Graphique/Integration/img-dev.png" alt="">
@@ -83,7 +85,7 @@
             </div>
           </div>
         </div>
-        <div class="col-3">
+        <div class="col-xl-3 col-sm-12">
           <div class="card text-center">
             <div class="card-body">
               <img src="Graphique/Integration/img-design.png" alt="">
@@ -91,7 +93,7 @@
             </div>
           </div>
         </div>
-        <div class="col-3">
+        <div class="col-xl-3 col-sm-12">
           <div class="card text-center">
             <div class="card-body">
               <img src="Graphique/Integration/img-etudiant.png" alt="">
@@ -108,7 +110,7 @@
   <section id="Apropos">
     <div class="container">
       <div class="row">
-        <div class="col-7">
+        <div class="col-xl-7 col-sm-12">
           <div class="GrandTitre">
             <h1 class="mb-n2">A propos de moi</h1>
             <p class="tirets mt-n5">- - -</p>
@@ -124,14 +126,15 @@
           <button type="button" class="btn gauche mt-5">Voir mon travail</button>
         </div>
 
-        <div class="col-5">
+        <div class="col-xl-5 col-sm-8">
           <div class="card">
             <div class="titre navbar">
               <h2 class="mt-1"><span class="gras">Classe : </span>mage</h2>
               <h2 class="mt-1"><span class="gras">Type : </span>rare</h2>
             </div>
-            <h3 class="ml-3 mt-3">Nom : Steven ROBERT</h3>
-            <div class="age">
+
+            <div class="mr-4">
+              <h3 class="ml-3 mt-3">Nom : Steven ROBERT</h3>
 
               <article id="niveau" class="d-flex justify-content-end mt-n4">
                 <ul>
@@ -141,35 +144,28 @@
               </article>
 
               <div class="border-age mt-n5"></div>
+
             </div>
-
-            <img src="Graphique/Integration/blanc.jpg" class="img-fluid col-4 mt-4" alt="">
-
-
-
-
-
-
 
             <article id="description">
 
-              <div class="pouvoir col-8">
-                <p><span class="gras">Pouvoir :</span> soif d'apprendre</p>
-                <p class="mt-n2"><span class="gras">Pouvoir secondaire :</span> étrangle ses ennemis avec un câble HDMI
-                </p>
-                <p class="mt-n2"><span class="gras">Arme principale :</span> bâton des arcanes</p>
-                <h4 class="mt-n2 mb-3"><span class="gras">Capacités :</span></h4>
-                
+              <div class="row">
+                <div class="col-4">
+                  <img src="Graphique/Integration/img-moi.jpg" alt="">
+                </div>
+                <div class="pouvoir col-6 ml-5 mt-4">
+                  <p><span class="gras">Pouvoir :<br></span> soif d'apprendre</p>
+                  <p class="mt-n2"><span class="gras">Pouvoir secondaire :<br></span> étrangle ses ennemis avec un câble
+                    HDMI
+                  </p>
+                  <p class="mt-n2"><span class="gras">Arme principale :<br></span> bâton des arcanes</p>
+                  <h4 class="mt-n2 mb-3"><span class="gras">Capacités :</span></h4>
+                </div>
               </div>
 
-
-
-
-
-
-              <div class="row">
-                <div class="col-4 mt-n1">
-                  <ul>
+              <div class="row d-flex justify-content-end">
+                <div class="col-4 mt-n4">
+                  <ul class="ml-n3">
                     <li>Créatif :</li>
                     <li>Technique :</li>
                     <li>Intrépide :</li>
@@ -177,59 +173,91 @@
                   </ul>
                 </div>
 
+                <div class="col-4 ml-n4 mt-n3">
 
+                  <div class="progression ml-n2">
+                    <div class="progress mr-4">
+                      <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80"
+                        aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
 
+                    <div class="progress mr-4">
+                      <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60"
+                        aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
 
+                    <div class="progress mr-4">
+                      <div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="70"
+                        aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
 
-
-
-
-
-                <div class="col-4 ml-n4">
-                  
-                  <div class="progress mr-3 mt-1">
-                    <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
-                      aria-valuemax="100"></div>
+                    <div class="progress mr-4">
+                      <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80"
+                        aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
                   </div>
 
-                  <div class="progress mr-3 mt-2">
-                    <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0"
-                      aria-valuemax="100"></div>
-                  </div>
-
-                  <div class="progress mr-3 mt-2">
-                    <div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0"
-                      aria-valuemax="100"></div>
-                  </div>
-
-                  <div class="progress mr-3 mt-2">
-                    <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
-                      aria-valuemax="100"></div>
-                  </div>
-                  
                 </div>
               </div>
 
             </article>
 
-
-
-
-
-
-
-
-
-
             <article id="utilisation">
-              <p class="pt-1 pl-3"><span class="gras">Coût d'utilisation : </span> 2 tranches
-                de jambon</p>
+              <p class="pt-1 pl-3"><span class="gras">Coût d'utilisation : </span> 220 points de vie</p>
               <p class="pl-3">Lieu d'apparition : Mulhouse</p>
             </article>
 
             <div class="d-flex justify-content-end mr-3">
-              <button type="button" class="droite btn mt-3 mb-4"><i class="far fa-envelope mr-2"></i>Invoquer <span
-                  class="gras">Steven ROBERT</span></button>
+              <button type="button" class="droite btn mt-3 mb-4" data-toggle="modal" data-target="#exampleModal"><i
+                  class="far fa-envelope mr-2"></i>Invoquer <span class="gras">Steven ROBERT</span></button>
+            </div>
+          </div>
+
+          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Vous allez invoquer Steven ROBERT</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+
+                <div class="modal-body">
+
+                  <form>
+                    <div class="form-group">
+                      <label for="recipient-name" class="col-form-label">Cela vous coutera 220 points de vie</label>
+                      <label for="recipient-name" class="col-form-label mt-n4 mb-2">Precisez-les details de votre quête
+                        ci-dessous</label>
+                      <br> <label for="recipient-name" class="col-form-label">Sujet :</label>
+                      <input type="text" class="form-control" id="recipient-name">
+                    </div>
+
+                    <div class="form-group">
+                      <label for="message-text" class="col-form-label">Nom :</label>
+                      <input type="text" class="form-control" id="recipient-name">
+                    </div>
+
+                    <div class="form-group">
+                      <label for="message-text" class="col-form-label">Email :</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
+
+                    <div class="form-group">
+                      <label for="message-text" class="col-form-label">Message :</label>
+                      <textarea class="form-control" id="message-text"></textarea>
+                    </div>
+                  </form>
+
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn" data-dismiss="modal">Annuler</button>
+                  <button type="button" class="btn">Envoyer la quête (-220 points de vie)</button>
+                </div>
+
+              </div>
             </div>
           </div>
 
@@ -257,9 +285,9 @@
       </div>
 
       <div class="row">
-        <div class="col-12 d-flex justify-content-center mb-4">
+        <div class="col-xl-12 col-sm-6 d-flex justify-content-center mb-4">
 
-          <div class="col-3">
+          <div class="col-xl-3 col-sm-6">
             <div class="row">
               <div class="infos">
                 <a href="">
@@ -270,7 +298,7 @@
             </div>
           </div>
 
-          <div class="col-3">
+          <div class="col-xl-3 col-sm-6">
             <div class="row">
               <div class="infos">
                 <a href="http://robste.formation-web-cci.aradev.fr/" target="blank">
@@ -281,7 +309,7 @@
             </div>
           </div>
 
-          <div class="col-3">
+          <div class="col-xl-3 col-sm-6">
             <div class="row">
               <div class="infos">
                 <a href="">
@@ -292,7 +320,7 @@
             </div>
           </div>
 
-          <div class="col-3">
+          <div class="col-xl-3 col-sm-6">
             <div class="row">
               <div class="infos">
                 <a href="">
@@ -313,21 +341,21 @@
         <div class="col-12">
 
           <div class="row">
-            <div class="col-4">
+            <div class="col-xl-4">
               <div class="bandeau-g text-center mt-5">
                 <h4 class="text-uppercase pt-2">creation du design</h4>
                 <p class="mt-n1">Maquette du site, cahier des charges</p>
               </div>
             </div>
 
-            <div class="col-4">
+            <div class="col-xl-4">
               <div class="bandeau-m text-center mt-5">
                 <h4 class="text-uppercase pt-2">elaboration des documents</h4>
                 <p class="mt-n1">Analyse informatique, UML, Merise...</p>
               </div>
             </div>
 
-            <div class="col-4">
+            <div class="col-xl-4">
               <div class="bandeau-d text-center mt-5">
                 <h4 class="text-uppercase  pt-2">developpement du site</h4>
                 <p class="mt-n1">Codage, programmation, responsive</p>
@@ -583,9 +611,7 @@
             </div>
         </div>
 
-
-
-        <div class="col-5 ml-n5">
+        <div class="col-xl-5 ml-sm-0 ml-xl-n5">
           <textarea class="form-control" placeholder="Votre message*" id="exampleFormControlTextarea1" rows="3"
             required></textarea>
           <button type="submit" class="btn btn-primary mt-2">Envoyer</button>
@@ -606,7 +632,7 @@
     <div class="container col-12 mt-5 d-flex justify-content-center">
       <div class="row">
         <div class="">
-          <p>&copy; Conception et réalisation par <a href="index.html">Steven ROBERT</a> - Tous droits réservés</p>
+          <p>&copy; Conception et réalisation par <a href="#">Steven ROBERT</a> - Tous droits réservés</p>
         </div>
       </div>
     </div>
@@ -622,6 +648,8 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous"></script>
+
+  <script src="js/menu.js"></script>
 
 </body>
 
