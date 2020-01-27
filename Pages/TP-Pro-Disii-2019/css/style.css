@@ -1,0 +1,281 @@
+/* RESET CSS */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* MEDIA QUERIES */
+
+
+
+
+
+
+
+/* CSS */
+
+#logo {
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+/* HEADER */
+/* MENU PRINCIPAL */
+
+#mainmenu ul li {
+    display: inline-block;
+    width: 132.3px;
+    background-color: black;
+    text-align: center;
+    height: 50px;
+    line-height: 50px; /* centrer le texte horizontalement */
+    margin-top: 30px;
+}
+
+#mainmenu ul li a {
+    color: #FFF;
+    display: block; /* permet de rendre toute la case clicable et change le a quand hover */
+}
+
+#mainmenu ul li.active {
+    background-color: #e4e3e1;
+}
+
+#mainmenu ul li.active a {
+    color: black;
+}
+
+#mainmenu ul li.active a:hover {
+    color: #e4e3e1;
+    transition: 0.3s;
+}
+
+#mainmenu ul li.active:hover {
+    background-color: black;
+}
+
+#mainmenu ul li:hover {
+   color: black;
+   background-color: #e4e3e1; 
+   transition: 0.3s;
+}
+
+#mainmenu ul li a:hover {
+    color: black;
+}
+
+/* PRESENTATION */
+
+#slider, #mainmenu, #menucarte {
+    text-align: center;
+}
+
+#menucarte li {
+    display: inline-block;
+    margin-top: 20px;
+    background-image: url(../img/fond.jpg);
+    width: 187px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-top: 30px;
+}
+
+#menucarte li:hover {
+    opacity: 0.7;
+    transition: 0.2s;
+    transform: scale(1.02)
+}
+
+#menucarte span {
+    display: block;
+    color: #FFF;
+    font-size: 26px;
+    margin-top: 10px;
+}
+
+#articles {
+    text-align: center;
+}
+
+.articles1, .articles2, .articles3 {
+    margin-top: 20px;
+    width: 300px;
+    display: inline-block;
+    padding: 8px;
+}
+
+.articles1 a.titre, .articles2 a.titre, .articles3 a.titre {
+    float: left;
+    color: black;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.articles1 p, .articles2 p, .articles3 p {
+    color: #a2a2a2;
+    margin-top: 13px;
+}
+
+.articles1 a.bouton, .articles2 a.bouton, .articles3 a.bouton {
+    color: white;
+    background-color: black;
+    padding: 8px;
+    float: left;
+    margin-top: 15px;
+}
+
+.articles1 a.bouton:hover, .articles2 a.bouton:hover, .articles3 a.bouton:hover {
+    opacity: 0.8;
+}
+
+.articles1 a.bouton:active, .articles2 a.bouton:active, .articles3 a.bouton:active {
+    transform: scale(0.95)
+}
+
+/* clients */
+
+#clients h2 {
+    margin-left: 480px;
+    font-weight: bold;
+    font-size: 25px;
+    margin-top: 100px;
+    margin-bottom: 30px;
+}
+
+#clients img {
+    padding: 0 35px;
+}
+
+#clients img:hover {
+    transform: scale(1.2);
+}
+
+.imgclients {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* footer */
+
+footer {
+    text-align: center;
+}
+
+footer, footer a {
+    background-image: url(../img/fond.jpg);
+    height: 300px;
+    color: #FFF;
+    font-size: 12px;
+}
+
+.footergauche img {
+    padding-bottom: 20px;
+}
+
+.footergauche, .footermilieugauche, .footermilieudroite, .footerdroite {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 50px;
+    text-align: left;
+    vertical-align: top;
+}
+
+.footermilieudroite {
+    margin-top: 70px;
+}
+
+.facebook {
+    margin-left: 80px;
+}
+
+.liens {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
