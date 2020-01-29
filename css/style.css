@@ -74,11 +74,11 @@ header {
 
 /* A PROPOS GAUCHE */
 
-#Apropos button.gauche {
+#Apropos a.gauche {
     background-color: #4f9cd0;
     color: #fff;
     font-size: 25px;
-    width: 254px;
+    width: 280px;
     height: 51px;
     border-radius: 50px;
 }
