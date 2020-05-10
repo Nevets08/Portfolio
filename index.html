@@ -15,8 +15,11 @@
 
 <body>
 
-  <!-- Mettre des sections ! -->
-  <!-- Attention pour titre et tiret -> a propos dans class ! css aussi -->
+  <!-- Button back to top  -->
+
+  <button class="btn hidden" id="btnScrollTop"><i class="fas fa-chevron-up"></i></button>
+
+  <!-- header -->
 
   <header>
     <section id="menu">
@@ -64,9 +67,6 @@
             </div>
           </div>
 
-          <div class="mt-3 col-4">
-            <img src="Graphique/Integration/img-header.jpg" class="img-fluid ml-5" alt="">
-          </div>
 
         </div>
     </section>
@@ -116,14 +116,19 @@
             <p class="tirets mt-n5">- - -</p>
           </div>
           <article id="descritpion">
-            <p>Ayant commencé mes études dans le bâtiment, j’ai ensuite décidé de me reconvertir dans un domaine qui me
-              passionne depuis mon enfance : le developpement informatique.</p>
-            <p class="mb-5">Depuis le 14 octobre 2019, je suis en formation au titre de developpeur intégrateur de
-              solutions
-              intranet/internet au campus de la CCI à Colmar. Je suis en constante évolution grâce aussi à une veille
-              technologique active.</p>
+            <p>Ayant <strong> commencé mes études dans le bâtiment</strong>, j’ai ensuite décidé de me
+              <strong>reconvertir</strong> dans un domaine qui me
+              passionne depuis mon enfance : <strong>le developpement informatique.</strong></p>
+            <p>Depuis le 14 octobre 2019, je suis en formation au titre de <strong> developpeur intégrateur de
+                solutions intranet/internet </strong> au campus de la CCI à Colmar. Je suis en constante évolution grâce
+              aussi à une <strong> veille
+                technologique active.</strong></p>
+            <p class="mb-2">J'ai décidé de me <strong> specialiser dans le developpement front </strong>afin de mieux
+              maitriser cette partie et
+              c'est ce qui me plaît le plus.</p>
+              <a href="Pages/CV Steven ROBERT.pdf" download="CV" type="button" class="btn gauche mt-5 mb-5">Télécharger mon
+                CV</a>
           </article>
-          <a href="Pages/CV Steven ROBERT.pdf" download="CV" type="button" class="btn gauche mt-5">Telecharger mon CV</a>
         </div>
 
         <div class="col-xl-5 col-sm-8 mt-sm-3">
@@ -175,25 +180,31 @@
 
                 <div class="col-4 ml-n4 mt-n3">
 
-                  <div class="progression ml-n2">
+                  <div class="progression ml-n2" id="creative">
                     <div class="progress mr-4">
-                      <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80"
+                      <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="80"
                         aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
 
-                    <div class="progress mr-4">
-                      <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60"
-                        aria-valuemin="0" aria-valuemax="100"></div>
+                    <div id="technical">
+                      <div class="progress mr-4">
+                        <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="60"
+                          aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
                     </div>
 
-                    <div class="progress mr-4">
-                      <div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="70"
-                        aria-valuemin="0" aria-valuemax="100"></div>
+                    <div id="intrepid">
+                      <div class="progress mr-4">
+                        <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="70"
+                          aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
                     </div>
 
-                    <div class="progress mr-4">
-                      <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80"
-                        aria-valuemin="0" aria-valuemax="100"></div>
+                    <div id="patience">
+                      <div class="progress mr-4">
+                        <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="80"
+                          aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
                     </div>
                   </div>
 
@@ -208,56 +219,9 @@
             </article>
 
             <div class="d-flex justify-content-end mr-3">
-              <button type="button" class="droite btn mt-3 mb-4" data-toggle="modal" data-target="#exampleModal"><i
-                  class="far fa-envelope mr-2"></i>Invoquer <span class="gras">Steven ROBERT</span></button>
-            </div>
-          </div>
-
-          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">Vous allez invoquer Steven ROBERT</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-
-                <div class="modal-body">
-
-                  <form>
-                    <div class="form-group">
-                      <label for="recipient-name" class="col-form-label">Cela vous coutera 220 points de vie</label>
-                      <label for="recipient-name" class="col-form-label mt-n4 mb-2">Precisez-les details de votre quête
-                        ci-dessous</label>
-                      <br> <label for="recipient-name" class="col-form-label">Sujet :</label>
-                      <input type="text" class="form-control" id="recipient-name">
-                    </div>
-
-                    <div class="form-group">
-                      <label for="message-text" class="col-form-label">Nom :</label>
-                      <input type="text" class="form-control" id="recipient-name">
-                    </div>
-
-                    <div class="form-group">
-                      <label for="message-text" class="col-form-label">Email :</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                    </div>
-
-                    <div class="form-group">
-                      <label for="message-text" class="col-form-label">Message :</label>
-                      <textarea class="form-control" id="message-text"></textarea>
-                    </div>
-                  </form>
-
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn" data-dismiss="modal">Annuler</button>
-                  <button type="button" class="btn">Envoyer la quête (-220 points de vie)</button>
-                </div>
-
-              </div>
+              <button type="button" class="droite btn mt-3 mb-4" id="buttonInvocation" data-toggle="modal"
+                data-target="#exampleModal"><i class="far fa-envelope mr-2"></i>Invoquer <span class="gras">Steven
+                  ROBERT</span></button>
             </div>
           </div>
 
@@ -272,67 +236,75 @@
 
   <section class="portfolio">
     <div class="container mt-5">
-      <div class="row">
-        <div class="col-12">
-          <div class="">
-
-            <div class="GrandTitre">
-              <h1 class="mb-n2 mt-5">Portfolio</h1>
-              <p class="tirets mt-n5">- - -</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-xl-12 col-sm-6 d-flex justify-content-center mb-4">
-
-          <div class="col-xl-3 col-sm-6">
-            <div class="row">
-              <div class="infos">
-                <a href="https://imgur.com/a/fI2R9df" target="blank">
-                  <h2 class="titre1">Maquette graphique</h2>
-                  <img src="Graphique/Integration/img-portfolio1.jpg" alt="Maquette graphique">
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-xl-3 col-sm-6">
-            <div class="row">
-              <div class="infos">
-                <a href="http://robste.formation-web-cci.aradev.fr/" target="blank">
-                  <h2 class="titre2">Design, intégration front-end</h2>
-                  <img src="Graphique/Integration/img-portfolio2.jpg" alt="Design integration front-end">
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-xl-3 col-sm-6">
-            <div class="row">
-              <div class="infos">
-                <a href="Pages/TP-Pro-Disii-2019/index.html" target="blank">
-                  <h2 class="titre3">Intégration front-end</h2>
-                  <img src="Graphique/Integration/img-portfolio3.jpg" alt="Design integration back-end">
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-xl-3 col-sm-6">
-            <div class="row">
-              <div class="infos">
-                <a href="http://ravoli.formation-web-cci.aradev.fr/" target="blank">
-                  <h2 class="titre4">Intégration back-end</h2>
-                  <img src="Graphique/Integration/img-portfolio4.jpg" alt="Integration back-end">
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div class="GrandTitre">
+        <h1 class="mb-n2 mt-5">Portfolio</h1>
+        <p class="tirets mt-n5">- - -</p>
       </div>
     </div>
+
+    <div class="container">
+      <div class="row">
+
+        <div class="col-3">
+        <div class="card-img">
+          <img src="Graphique/Integration/img-portfolio1.jpg" alt="">
+        </div>
+
+        <div class="infos-portfolio">
+          <div class="infos-portfolio-hidden">
+            <h1>Maquette graphique</h1>
+            <div class="underline"></div>
+            <p>Ce projet à été réalisé pour la création d'un site fictif afin de promouvoir le restaurant qui n'avait
+              qu'une page Facebook.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-3">
+        <div class="card-img">
+          <img src="Graphique/Integration/img-portfolio2.jpg" alt="">
+        </div>
+
+        <div class="infos-portfolio">
+          <div class="infos-portfolio-hidden infos-portfolio-animate">
+            <h1>Design et integration</h1>
+            <div class="underline"></div>
+            <p>Refonte d'un site web lors du premier projet de ma formation : créer un design au goût du jour et manipuler du HTML et du CSS.</p>
+          </div>
+        </div>
+      </div>
+        
+      <div class="col-3">
+        <div class="card-img">
+          <img src="Graphique/Integration/img-portfolio3.jpg" alt="">
+        </div>
+
+        <div class="infos-portfolio">
+          <div class="infos-portfolio-hidden infos-portfolio-animate">
+            <h1>Integration front-end</h1>
+            <div class="underline"></div>
+            <p>Intégrer une maquette en respectant le plus possible les dimensions demandées.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-3">
+        <div class="card-img">
+          <img src="Graphique/Integration/img-portfolio4.jpg" alt="">
+        </div>
+
+        <div class="infos-portfolio">
+          <div class="infos-portfolio-hidden infos-portfolio-animate">
+            <h1>Integration Back-end</h1>
+            <div class="underline"> </div>
+            <p>Deuxième vrai projet de la formation : créer une base de données, les manipuler et rendre le site dynamique.</p>
+          </div>
+        </div>
+      </div>
+
+      </div>
+    </div>
+
   </section>
 
   <section id="bandeau">
@@ -350,15 +322,15 @@
 
             <div class="col-xl-4">
               <div class="bandeau-m text-center mt-5">
-                <h4 class="text-uppercase pt-2">elaboration des documents</h4>
-                <p class="mt-n1">Analyse informatique, UML, Merise...</p>
+                <h4 class="text-uppercase pt-2">developpement du site</h4>
+                <p class="mt-n1">Codage, programmation, responsive</p>
               </div>
             </div>
 
             <div class="col-xl-4">
               <div class="bandeau-d text-center mt-5">
-                <h4 class="text-uppercase  pt-2">developpement du site</h4>
-                <p class="mt-n1">Codage, programmation, responsive</p>
+                <h4 class="text-uppercase  pt-2">Maintenance</h4>
+                <p class="mt-n1">Nouvelles fonctionnalités, refonte design...</p>
               </div>
             </div>
           </div>
@@ -382,7 +354,7 @@
 
           <article id="html">
             <div class="progress mb-3">
-              <div class="progress-bar" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0"
+              <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="60" aria-valuemin="0"
                 aria-valuemax="100"></div>
               <span class="progress-type mt-1 ml-2"><img src="Graphique/Integration/logo-html.png" class="mr-2"
                   alt="HTML5">HTML5<br><span class="framework">Bootstrap</span></span>
@@ -391,7 +363,7 @@
 
           <article id="css">
             <div class="progress mb-3">
-              <div class="progress-bar" role="progressbar" style="width: 55%" aria-valuenow="55" aria-valuemin="0"
+              <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="55" aria-valuemin="0"
                 aria-valuemax="100"></div>
               <span class="progress-type mt-1 ml-2"><img src="Graphique/Integration/logo-css.png" class="mr-2"
                   alt="CSS3">CSS3</span>
@@ -400,34 +372,34 @@
 
           <article id="js">
             <div class="progress mb-3">
-              <div class="progress-bar" role="progressbar" style="width: 35%" aria-valuenow="35" aria-valuemin="0"
+              <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="35" aria-valuemin="0"
                 aria-valuemax="100"></div>
               <span class="progress-type mt-1 ml-2"><img src="Graphique/Integration/logo-js.png" class="mr-2"
                   alt="Javascript">Javascript</span>
             </div>
           </article>
 
-          <article id="php">
+          <article id="react">
             <div class="progress mb-3">
-              <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0"
-                aria-valuemax="100"></div>
-              <span class="progress-type mt-1 ml-2"><img src="Graphique/Integration/logo-php.png" class="mr-2"
-                  alt="PHP">PHP<br><span class="framework">CodeIgniter</span></span>
+              <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="50" aria-valuemin="0"
+                aria-valuemax="100"><span id="loading">En cours d'apprentissage</span></div>
+              <span class="progress-type mt-1 ml-2"><img src="Graphique/Integration/software.png" class="mr-2"
+                  alt="react">React.js<br><span class="framework"></span></span>
             </div>
           </article>
 
-          <article id="office">
+          <article id="wordpress">
             <div class="progress mb-3">
-              <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
-                aria-valuemax="100"></div>
-              <span class="progress-type mt-1 ml-2"><img src="Graphique/Integration/logo-office.png" class="mr-2"
-                  alt="Office 365">Office 365</span>
+              <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="50" aria-valuemin="0"
+                aria-valuemax="100"></span></div>
+              <span class="progress-type mt-1 ml-2"><img src="Graphique/Integration/logotype.png" class="mr-2"
+                  alt="react">Wordpress<br><span class="framework"></span></span>
             </div>
           </article>
 
           <article id="photoshop">
             <div class="progress mb-3">
-              <div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0"
+              <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="70" aria-valuemin="0"
                 aria-valuemax="100"></div>
               <span class="progress-type mt-1 ml-2"><img src="Graphique/Integration/logo-photoshop.png" class="mr-2"
                   alt="Photoshop">Photoshop</span>
@@ -436,7 +408,7 @@
 
           <article id="anglais">
             <div class="progress mb-3">
-              <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
+              <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="90" aria-valuemin="0"
                 aria-valuemax="100"></div>
               <span class="progress-type mt-1 ml-2"><img src="Graphique/Integration/logo-uk.png" class="mr-2"
                   alt="Anglais">Anglais</span>
@@ -445,7 +417,7 @@
 
           <article id="redaction">
             <div class="progress mb-3">
-              <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+              <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="85" aria-valuemin="0"
                 aria-valuemax="100"></div>
               <span class="progress-type mt-1 ml-2"><img src="Graphique/Integration/logo-rediger.png" class="mr-2"
                   alt="Rédaction">Rédaction</span>
@@ -454,7 +426,7 @@
 
           <article id="integration">
             <div class="progress mb-3">
-              <div class="progress-bar" role="progressbar" style="width: 65%" aria-valuenow="65" aria-valuemin="0"
+              <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="65" aria-valuemin="0"
                 aria-valuemax="100"></div>
               <span class="progress-type mt-1 ml-2"><img src="Graphique/Integration/logo-integration.png" class="mr-2"
                   alt="Intégration">Intégration</span>
@@ -638,6 +610,9 @@
     </div>
   </footer>
 
+  <script src="js/loading.js"></script>
+  <script src="js/animate.js"></script>
+
   <script src="https://use.fontawesome.com/releases/v5.12.0/js/all.js" data-auto-replace-svg="nest"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
@@ -648,8 +623,6 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous"></script>
-
-  <script src="js/menu.js"></script>
 
 </body>
 

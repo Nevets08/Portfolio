@@ -2,9 +2,69 @@ body {
     font-family: roboto;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+/* BUTTON SCROLL TOP */
+
+#btnScrollTop {
+    background-color: #4F9CD0;
+    color: #fff;
+    font-size: 30px;
+    width: 60px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1;
+}
+
+.hidden {
+    visibility: hidden;
+    transition: all 0.5s;
+    opacity: 0;
+}
+
+.show {
+    visibility: visible;
+    opacity: 1;
+    animation: slide-up 0.4s ease;
+}
+
+/* animation button scroll */
+@keyframes slide-up {
+    0% {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+#btnScrollTop:active {
+    transform: scale(0.9);
+    transition: 0.1s;
+} 
+
+/* MENU */
+
 #menu .nav-item a {
     font-size: 20px;
     color: #fff;
+    margin-left: 5px;
+}
+
+#menu .nav-item a:hover {
+    /* animation: slide-up 0.4s ease; */
+    transition: all 0.3s;
+    margin-top: -6px;
+}
+
+#menu .nav-item a:not(:hover) {
+    transition: all 0.3s;
 }
 
 /* FOND BLEU */ 
@@ -85,6 +145,7 @@ header {
 
 #Apropos p {
     font-size: 22px;
+    text-align: justify;
 }
 
 /* A PROPOS DROITE */
@@ -157,6 +218,62 @@ header {
     background-color: #1b85cd;
 }
 
+/* ANIMATION PROGRESS BAR */
+
+#firstProgression {
+    animation: firstProgression 1s ease-in-out forwards;
+}
+
+#secondProgression {
+    animation: secondProgression 1.1s ease-in-out forwards;
+}
+
+#thirdProgression {
+    animation: thirdProgression 1.3s ease-in-out forwards;
+}
+
+#fourthProgression {
+    animation: fourthProgression 1.6s ease-in-out forwards;
+}
+
+@keyframes firstProgression {
+    from {
+      width: 0;
+    }
+    to {
+      width: 80%;
+    }
+  } 
+
+  @keyframes secondProgression {
+    from {
+      width: 0;
+    }
+    to {
+      width: 60%;
+    }
+  } 
+
+  @keyframes thirdProgression {
+    from {
+      width: 0;
+    }
+    to {
+      width: 70%;
+    }
+  } 
+
+  @keyframes fourthProgression {
+    from {
+      width: 0;
+    }
+    to {
+      width: 80%;
+    }
+  } 
+
+  /* END ANIMATION PROGRESS BAR */
+
 #description img {
     margin-top: 70px;
 }
@@ -181,24 +298,67 @@ header {
 
 /* PORTFOLIO */
 
-.infos a img {
-    border-left: 35px solid rgba(79, 156, 208, 0.45);
+.card-img img {
+    border-radius: 20px;
+    box-shadow: 2px 2px 23px -9px rgba(0,0,0,0.75);
+    cursor: pointer;
+    width: 220px;
 }
 
-.infos a h2 {
-    font-size: 16px;
-    writing-mode: vertical-rl;
+.card-img:hover {
+    transition: 0.4s;
+    opacity: 0.4;
+    margin-top: -20px;
+}
+
+.card-img {
     position: absolute;
-    color: #fff;
-    margin-left: 10px;
+    z-index: -1;
 }
 
-.infos a h2.titre1, .infos a h2.titre3, .infos a h2.titre4 {
-    margin-top: 55px;
+.underline {
+    background-color: #1b85cd;
+    width: 50px;
+    height: 5px;
+    margin-left: 30px;
+    margin-top: 20px;
 }
 
-.infos a h2.titre2 {
-    margin-top: 32px;
+.infos-portfolio-hidden {
+    visibility: hidden;
+}
+
+.infos-portfolio-animate {
+    animation: slide-up-portfolio 0.5s ease-in-out forwards;
+}
+
+@keyframes slide-up-portfolio {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.infos-portfolio p {
+    text-align: justify;
+    width: 70%;
+    margin-left: 20px;
+    margin-top: 20px;
+    color: #515A5A;
+    text-shadow: 0px 1px 0px rgba(81,90,90,0.75);
+    font-size: 14px;
+}
+
+.infos-portfolio h1 {
+    text-align: center;
+    margin-right: 35px;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 35px;
 }
 
 /* BANDEAU */
@@ -207,6 +367,7 @@ header {
     background-color: #b0d2ea;
     opacity: 45%;
     height: 155px;
+    margin-top: 110px;
 }
 
 #bandeau .bandeau-g, #bandeau .bandeau-d {
@@ -235,39 +396,169 @@ header {
 
 #html .progress-bar{
     background-color: #e46643;
+    width: 0;
 }
+
+#htmlProgression {
+    animation: progress-html 1s ease-in-out forwards;
+}
+
+@keyframes progress-html {
+    from {
+      width: 0;
+    }
+    to {
+      width: 70%;
+    }
+  } 
 
 #css .progress-bar{
     background-color: #297db5;
+    width: 0;
 }
 
-#js .progress-bar{
+#cssProgression {
+    animation: progress-css 1.1s ease-in-out forwards;
+}
+
+@keyframes progress-css {
+    from {
+      width: 0;
+    }
+    to {
+      width: 60%;
+    }
+  } 
+
+#js .progress-bar {
     background-color: #fce37f;
+    width: 0;
 }
 
-#php .progress-bar{
-    background-color: #8a8cb3;
+#jsProgression {
+    animation: progress-js 1.2s ease-in-out forwards;
 }
 
-#office .progress-bar{
-    background-color: #da5a38;
+@keyframes progress-js {
+    from {
+      width: 0;
+    }
+    to {
+      width: 45%;
+    }
+  } 
+
+#react .progress-bar{
+    background-color: #61DAFB;
+    width: 0;
 }
+
+#reactProgression {
+    animation: progress-react 1.2s ease-in-out forwards;
+}
+
+@keyframes progress-react {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  } 
+
+#react .progress-bar #loading {
+    font-size: 15px;
+}
+
+#wordpress .progress-bar{
+    background-color: #BDC3C7;
+    width: 0;
+}
+
+#wordpressProgression {
+    animation: progress-wordpress 1.3s ease-in-out forwards;
+}
+
+@keyframes progress-wordpress {
+    from {
+      width: 0;
+    }
+    to {
+      width: 50%;
+    }
+  } 
 
 #photoshop .progress-bar{
-    background-color: #69e6fb;
+    background-color: #1A5276;
+    width: 0;
 }
+
+#photoshopProgression {
+    animation: progress-photoshop 1.3s ease-in-out forwards;
+}
+
+@keyframes progress-photoshop {
+    from {
+      width: 0;
+    }
+    to {
+      width: 60%;
+    }
+  } 
 
 #anglais .progress-bar{
     background-color: #d04556;
+    width: 0;
 }
+
+#englishProgression {
+    animation: progress-anglais 1.4s ease-in-out forwards;
+}
+
+@keyframes progress-anglais {
+    from {
+      width: 0;
+    }
+    to {
+      width: 90%;
+    }
+  } 
 
 #redaction .progress-bar{
     background-color: #4c95c7;
+    width: 0;
 }
+
+#redactionProgression {
+    animation: progress-redaction 1.3s ease-in-out forwards;
+}
+
+@keyframes progress-redaction {
+    from {
+      width: 0;
+    }
+    to {
+      width: 85%;
+    }
+  } 
 
 #integration .progress-bar{
     background-color: #e46643;
+    width: 0;
 }
+
+#integrationProgression {
+    animation: progress-integration 1.6s ease-in-out forwards;
+}
+
+@keyframes progress-integration {
+    from {
+      width: 0;
+    }
+    to {
+      width: 70%;
+    }
+  } 
 
 article .progress, article .progress-bar {
     height: 35px;
