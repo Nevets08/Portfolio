@@ -4,6 +4,8 @@ body {
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+
 }
 
 /* BUTTON SCROLL TOP */
@@ -35,14 +37,13 @@ html {
 @keyframes slide-up {
     0% {
         opacity: 0;
-        transform: translateY(60px);
+        transform: translateY(150px);
     }
     100% {
         opacity: 1;
         transform: translateY(0);
     }
 }
-
 
 #btnScrollTop:active {
     transform: scale(0.9);
@@ -55,28 +56,66 @@ html {
     font-size: 20px;
     color: #fff;
     margin-left: 5px;
+    animation: slide-right-menu 1s ease-in-out forwards;
+}
+
+@keyframes slide-right-menu {
+    0% {
+        transform: translateX(1000px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+#menu img {
+    width: 80px;
+    margin-right: 15px;
+    margin-left: -30px;
 }
 
 #menu .nav-item a:hover {
-    /* animation: slide-up 0.4s ease; */
     transition: all 0.3s;
     margin-top: -6px;
 }
 
-#menu .nav-item a:not(:hover) {
-    transition: all 0.3s;
+#menu .logo a {
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #1b85cd;
+    font-size: 1.6vw;
 }
 
 /* FOND BLEU */ 
 
-header {
-    height: 800px;
-    background-image: url(https://i.ibb.co/Vgdjqrw/index-bg-header.png);
+#fondbleu .container {
+    display: flex;
+    justify-content: center;
+    height: 90vh;
 }
 
-#fondbleu h1, #fondbleu h2 {
-    font-size: 100px;
+#fondbleu h1 {
+    font-size: 4vw;
     color: #fff;
+    letter-spacing: 5px;
+}
+
+#fondbleu h2 {
+    font-size: 5.5vw;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 10px;
+    margin-top: 50px;
+} 
+
+#fondbleu h2 span {
+    color: #1b85cd;
+}
+
+#fondbleu, header {
+    background-color: #4F9CD0;
 }
 
 #fondbleu button {
@@ -86,6 +125,42 @@ header {
     width: 350px;
     height: 70px;
     border-radius: 50px;
+    margin-top: 10%;
+    animation: slide-right-header 1s ease-in-out forwards;
+}
+
+#fondbleu button:hover {
+    margin-top: 9%;
+    transition:all 0.3s;
+}
+
+/* button */
+@keyframes slide-right-header {
+    0% {
+        transform: translateX(-600px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.blue-underline {
+    background-color: #4F9CD0;
+    width: 100%;
+    height: 8px;
+    position: fixed;
+    bottom: 0;
+    z-index: 1;
+    animation: slide-right 2s ease-in-out forwards;
+}
+
+@keyframes slide-right {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
 }
     
 /* mettre un box shadow au btn */
@@ -103,6 +178,10 @@ header {
 .row h5 {
     font-size: 20px;
     font-weight: bold;
+}
+
+#cartes {
+    margin-top: 150px;
 }
 
 #cartes .developper img {
@@ -301,14 +380,7 @@ header {
 .card-img img {
     border-radius: 20px;
     box-shadow: 2px 2px 23px -9px rgba(0,0,0,0.75);
-    cursor: pointer;
     width: 220px;
-}
-
-.card-img:hover {
-    transition: 0.4s;
-    opacity: 0.4;
-    margin-top: -20px;
 }
 
 .card-img {
@@ -318,7 +390,7 @@ header {
 
 .underline {
     background-color: #1b85cd;
-    width: 50px;
+    width: 40px;
     height: 5px;
     margin-left: 30px;
     margin-top: 20px;
@@ -356,7 +428,7 @@ header {
 .infos-portfolio h1 {
     text-align: center;
     margin-right: 35px;
-    margin-top: 10px;
+    margin-top: 20px;
     font-weight: bold;
     font-size: 35px;
 }

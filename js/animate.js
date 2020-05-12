@@ -18,6 +18,21 @@ btnTopScroll.addEventListener('click', () => {
 
 /* MENU SCROLL TO SECTION */
 
+// Blue underline
+const underlineSelector = document.querySelector('#menu ul li:nth-child(2)');
+
+underlineSelector.addEventListener('click', () => {
+    if (window.pageYOffset > 300) {
+        const createDiv = document.createElement('div');
+        createDiv.setAttribute('class', 'blue-underline');
+        // const createLapContent = document.createTextNode('Lap ' + lapCount + ' ' + selectorMin.innerHTML + ':' + selectorSec.innerHTML + ':' + selectorMs.innerHTML);
+        // createDiv.appendChild(createLapContent);
+        document.querySelector('header').appendChild(createDiv);
+    } else {
+        return;
+    };
+});
+
 // A propos
 const menuAboutSelector = document.querySelector('#menu ul li:nth-child(2)');
 
@@ -119,13 +134,17 @@ window.addEventListener('scroll', () => {
 
 /* PORTFOLIO -> ANIMATION ACTIVE KEYFRAMES ON MOUSEOVER */
 
-const portfolioCard = document.querySelector('.portfolio .infos-portfolio');
-const portfolioCardContent = document.querySelector('.portfolio .infos-portfolio .infos-portfolio-hidden')
+const portfolioCard = document.querySelector('.portfolio .card-img');
+const portfolioCardContent = document.querySelector('.portfolio .infos-portfolio');
 
-portfolioCard.addEventListener('mouseenter', () => {
-    portfolioCardContent.classList.remove('infos-portfolio-hidden');
-    portfolioCardContent.classList.add('infos-portfolio-animate');
+portfolioCardContent.addEventListener('mouseover', () => {
+    portfolioCard.classList.remove('infos-portfolio-hidden');
+    portfolioCard.classList.add('infos-portfolio-animate');
+    portfolioCardContent.style.opacity = "0.5";
+});
+
+portfolioCardContent.addEventListener('mouseout', () => {
+    portfolioCard.classList.remove('infos-portfolio-animate');
 });
 
 console.log(portfolioCard)
-console.log(portfolioCardContent)

@@ -1,19 +1,21 @@
-const loadingSelector = document.getElementById('loading');
-let dots = '.';
+/* COMPENTENCES -> 3 DOTS LOADING */
 
-// function loadingDots() {
+const loadingSelector = document.getElementById('loading');
+
+function loadingDots(wordContent) {
     setInterval(() => {
-    if (dots === '...') {
-        dots = 0;
-    } else {
-        dots++;
-    };
+        if (loadingSelector.innerHTML === wordContent) {
+            loadingSelector.innerHTML = wordContent + '.';
+        } else if (loadingSelector.innerHTML === wordContent + '.') {
+            loadingSelector.innerHTML = wordContent + '..';
+        } else if (loadingSelector.innerHTML === wordContent + '..') {
+            loadingSelector.innerHTML = wordContent + '...';
+        } else {
+            loadingSelector.innerHTML = wordContent;
+        }
+    
 }, 800);
 
-loadingSelector.innerHTML += dots;
-    
-// };
+};
 
-// loadingDots();
-
-console.log(dots);
+loadingDots('Prochainement');
