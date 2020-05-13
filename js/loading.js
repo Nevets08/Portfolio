@@ -1,4 +1,4 @@
-/* COMPENTENCES -> 3 DOTS LOADING */
+/* COMPENTENCES -> Animation 3 DOTS LOADING */
 
 const loadingSelector = document.getElementById('loading');
 

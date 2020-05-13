@@ -40,6 +40,7 @@ menuAboutSelector.addEventListener('click', () => {
     window.scrollTo(0, 860);
 });
 
+
 // Portfolio
 const menuPortfolioSelector = document.querySelector('#menu ul li:nth-child(3)');
 
@@ -74,6 +75,21 @@ const buttonKnowSelector = document.querySelector('#fondbleu button');
 buttonKnowSelector.addEventListener('click', () => {
     window.scrollTo(0, 860);
 });
+
+/* TITLE ANIMATION */
+
+const titleAboutSelector = document.querySelector('#Apropos h1')
+
+window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 500) {
+        titleAboutSelector.classList.add('grandTitre-animate');
+    } else {
+        titleAboutSelector.classList.remove('grandTitre-animate');
+    };
+});
+
+console.log(titleAboutSelector)
+
 
 /* CAPACITY ANIMATION TRIGGER KEYFRAME ON SCROLL = 750 */
 
@@ -134,17 +150,17 @@ window.addEventListener('scroll', () => {
 
 /* PORTFOLIO -> ANIMATION ACTIVE KEYFRAMES ON MOUSEOVER */
 
-const portfolioCard = document.querySelector('.portfolio .card-img');
-const portfolioCardContent = document.querySelector('.portfolio .infos-portfolio');
+const portfolioCard = document.querySelector('.portfolio .card-img .infos-portfolio');
+const portfolioCardContent = document.querySelector('.portfolio .infos-portfolio-hidden');
 
-portfolioCardContent.addEventListener('mouseover', () => {
-    portfolioCard.classList.remove('infos-portfolio-hidden');
-    portfolioCard.classList.add('infos-portfolio-animate');
-    portfolioCardContent.style.opacity = "0.5";
+portfolioCard.addEventListener('mouseover', () => {
+    portfolioCardContent.classList.remove('infos-portfolio-hidden');
+    portfolioCardContent.classList.add('infos-portfolio-animate');
 });
 
-portfolioCardContent.addEventListener('mouseout', () => {
-    portfolioCard.classList.remove('infos-portfolio-animate');
+portfolioCard.addEventListener('mouseout', () => {
+    portfolioCardContent.classList.remove('infos-portfolio-animate');
+    portfolioCardContent.classList.add('infos-portfolio-hidden');
 });
 
 console.log(portfolioCard)
