@@ -92,6 +92,19 @@ html {
     font-size: 1.6vw;
 }
 
+/* button mobile (burger) */
+
+#menu nav button {
+    color: #fff;
+    border: none;
+    font-size: 30px;
+}
+
+#menu nav button:active {
+    transform: rotate(90deg);
+    transition: 0.6s;
+}
+
 /* FOND BLEU */ 
 
 #fondbleu .container {
@@ -157,16 +170,6 @@ html {
     position: fixed;
     bottom: 0;
     z-index: 1;
-    animation: slide-right 2s ease-in-out forwards;
-}
-
-@keyframes slide-right {
-    0% {
-        width: 0%;
-    }
-    100% {
-        width: 100%;
-    }
 }
 
 /* Carte dev des etu */
@@ -223,15 +226,34 @@ html {
 
 /* A PROPOS GAUCHE */
 
+#Apropos a {
+    transition: all 0.3s;
+}
+
 #Apropos a.gauche {
     background-color: #4f9cd0;
     color: #fff;
     font-size: 25px;
-    width: 280px;
+    width: 300px;
     height: 51px;
     border-radius: 50px;
     box-shadow: 2px 2px 23px -9px rgba(0,0,0,0.75);
+    transition: all 0.3s;
+    margin-top: 80px;
 }
+
+#Apropos a.gauche i {
+    animation: button-download-cv 0.2s ease-in-out forwards;
+}
+
+@keyframes button-download-cv {
+    from {
+      font-size: 1px;
+    }
+    to {
+        font-size: 22px;
+    }
+  } 
 
 #Apropos a.gauche:hover {
     transform: scale(1.03);
@@ -349,7 +371,7 @@ html {
       width: 0;
     }
     to {
-      width: 80%;
+      width: 90%;
     }
   } 
 
@@ -358,7 +380,7 @@ html {
       width: 0;
     }
     to {
-      width: 60%;
+      width: 70%;
     }
   } 
 
@@ -394,10 +416,12 @@ html {
     font-weight: bold;
 }
 
+/*
 .modal-body, .modal-footer, .modal-header {
     background-color: #4f9cd0;
     color: #fff;
-}
+} 
+*/
 
 .modal-footer button {
     background-color: #1b85cd;
@@ -410,7 +434,6 @@ html {
     border-radius: 20px;
     box-shadow: 2px 2px 23px -9px rgba(0,0,0,0.75);
     width: 220px;
-    animation: progress-bandeau 1s ease-in-out forwards;
 }
 
 .card-img {
@@ -427,7 +450,7 @@ html {
 }
 
 .infos-portfolio-hidden {
-    
+    visibility: hidden;
 }
 
 .infos-portfolio-animate {
@@ -461,6 +484,24 @@ html {
     margin-top: 20px;
     font-weight: bold;
     font-size: 35px;
+}
+
+.infos-portfolio a {
+    margin-left: 18px;
+    font-size: 16px;
+    background-color: #1b85cd;
+    color: #fff;
+}
+
+.infos-portfolio a:hover {
+    color: #fff;
+    margin-left: 23px;
+    transition: 0.3s;
+}
+
+.infos-portfolio a:active {
+    transform: scale(0.90);
+    transition: 0.2s;
 }
 
 /* BANDEAU */
@@ -533,8 +574,27 @@ html {
     }
   } 
 
+  
+#node .progress-bar {
+    background-color: #27AE60;
+    width: 0;
+}
+    
+#nodeProgression {
+    animation: progress-node 1.2s ease-in-out forwards;
+}
+    
+    @keyframes progress-node {
+        from {
+            width: 0;
+        }
+        to {
+            width: 100%;
+        }
+    } 
+    
 #js .progress-bar {
-    background-color: #fce37f;
+    background-color: #F7DC6F;
     width: 0;
 }
 
@@ -569,8 +629,8 @@ html {
     }
   } 
 
-#react .progress-bar #loading {
-    font-size: 15px;
+.progress-bar .loading {
+    font-size: 16px;
 }
 
 #wordpress .progress-bar{
@@ -587,7 +647,7 @@ html {
       width: 0;
     }
     to {
-      width: 50%;
+      width: 40%;
     }
   } 
 
@@ -675,6 +735,10 @@ article .progress, article .progress-bar {
 
 .progress .progress-type .framework {
     font-size: 10px;
+}
+
+.progress-type i {
+    font-size: 18px;
 }
 
 /* PARCOURS */

@@ -18,28 +18,12 @@ btnTopScroll.addEventListener('click', () => {
 
 /* MENU SCROLL TO SECTION */
 
-// Blue underline
-const underlineSelector = document.querySelector('#menu ul li:nth-child(2)');
-
-underlineSelector.addEventListener('click', () => {
-    if (window.pageYOffset > 300) {
-        const createDiv = document.createElement('div');
-        createDiv.setAttribute('class', 'blue-underline');
-        // const createLapContent = document.createTextNode('Lap ' + lapCount + ' ' + selectorMin.innerHTML + ':' + selectorSec.innerHTML + ':' + selectorMs.innerHTML);
-        // createDiv.appendChild(createLapContent);
-        document.querySelector('header').appendChild(createDiv);
-    } else {
-        return;
-    };
-});
-
 // A propos
 const menuAboutSelector = document.querySelector('#menu ul li:nth-child(2)');
 
 menuAboutSelector.addEventListener('click', () => {
     window.scrollTo(0, 860);
 });
-
 
 // Portfolio
 const menuPortfolioSelector = document.querySelector('#menu ul li:nth-child(3)');
@@ -76,6 +60,26 @@ buttonKnowSelector.addEventListener('click', () => {
     window.scrollTo(0, 860);
 });
 
+// APROPOS -> Button "Télécharger mon CV" -> MOUSEOVER -> apparait une icone
+
+const buttonDownloadCv = document.querySelector('#Apropos a.gauche');
+
+buttonDownloadCv.addEventListener('mouseover', () => {
+    buttonDownloadCv.innerHTML = '<i class="fas fa-file-download"></i><span> </span> Télécharger mon CV'
+});
+
+buttonDownloadCv.addEventListener('mouseout', () => {
+    buttonDownloadCv.innerHTML = 'Télécharger mon CV';
+});
+
+// APROPOS -> Button "Invoquer" -> Click, scroll to bottom of the page
+
+const invocationButton = document.querySelector('#Apropos .card button.droite');
+
+invocationButton.addEventListener('click', () => {
+    window.scrollTo(0, 6000);
+});
+
 /* TITLE ANIMATION */
 
 const titleAboutSelector = document.querySelector('#Apropos h1')
@@ -87,8 +91,6 @@ window.addEventListener('scroll', () => {
         titleAboutSelector.classList.remove('grandTitre-animate');
     };
 });
-
-console.log(titleAboutSelector)
 
 
 /* CAPACITY ANIMATION TRIGGER KEYFRAME ON SCROLL = 750 */
@@ -112,7 +114,7 @@ window.addEventListener('scroll', () => {
     };
 });
 
-/* COMPETENCES -> ANIMATION ACTIVE KEYFRAMES ON SCROLL = 1900 */
+/* COMPETENCES -> ANIMATION ACTIVE KEYFRAMES ON SCROLL = 2200 */
 
 const htmlProgressBar = document.querySelector('.competences #html .progress-bar');
 const cssProgressBar = document.querySelector('.competences #css .progress-bar');
@@ -123,9 +125,10 @@ const photoshopProgressBar = document.querySelector('.competences #photoshop .pr
 const EnglishProgressBar = document.querySelector('.competences #anglais .progress-bar');
 const redactionProgressBar = document.querySelector('.competences #redaction .progress-bar');
 const integrationProgressBar = document.querySelector('.competences #integration .progress-bar');
+const nodeProgressionBar = document.querySelector('.competences #node .progress-bar');
 
 window.addEventListener('scroll', () => {
-    if (window.pageYOffset > 1900) {
+    if (window.pageYOffset > 2200) {
         htmlProgressBar.id = 'htmlProgression';
         cssProgressBar.id = 'cssProgression';
         jsProgressBar.id = 'jsProgression';
@@ -135,6 +138,7 @@ window.addEventListener('scroll', () => {
         EnglishProgressBar.id = 'englishProgression';
         redactionProgressBar.id = 'redactionProgression';
         integrationProgressBar.id = 'integrationProgression';
+        nodeProgressionBar.id = 'nodeProgression';
     } else {
         htmlProgressBar.removeAttribute('id');
         cssProgressBar.removeAttribute('id');
@@ -145,22 +149,22 @@ window.addEventListener('scroll', () => {
         EnglishProgressBar.removeAttribute('id');
         redactionProgressBar.removeAttribute('id');
         integrationProgressBar.removeAttribute('id');
+        nodeProgressionBar.removeAttribute('id');
     };
 });
 
 /* PORTFOLIO -> ANIMATION ACTIVE KEYFRAMES ON MOUSEOVER */
 
-const portfolioCard = document.querySelector('.portfolio .card-img .infos-portfolio');
-const portfolioCardContent = document.querySelector('.portfolio .infos-portfolio-hidden');
+const cardSelector = document.querySelectorAll('.infos-portfolio');
 
-portfolioCard.addEventListener('mouseover', () => {
-    portfolioCardContent.classList.remove('infos-portfolio-hidden');
-    portfolioCardContent.classList.add('infos-portfolio-animate');
-});
+for (let i = 0; i < cardSelector.length; i++) {
+    cardSelector[i].addEventListener('mouseover', () => {
+        cardSelector[i].firstElementChild.classList.add('infos-portfolio-animate');
+        cardSelector[i].firstElementChild.classList.remove('infos-portfolio-hidden');
+    });
 
-portfolioCard.addEventListener('mouseout', () => {
-    portfolioCardContent.classList.remove('infos-portfolio-animate');
-    portfolioCardContent.classList.add('infos-portfolio-hidden');
-});
-
-console.log(portfolioCard)
+    cardSelector[i].addEventListener('mouseout', () => {
+        cardSelector[i].firstElementChild.classList.remove('infos-portfolio-animate');
+        cardSelector[i].firstElementChild.classList.add('infos-portfolio-hidden');
+    });
+};
