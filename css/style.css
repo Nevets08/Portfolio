@@ -509,11 +509,10 @@ html {
 #bandeau {
     background-color: #b0d2ea;
     opacity: 45%;
-    height: 155px;
     margin-top: 110px;
 }
 
-#bandeau .bandeau-g, #bandeau .bandeau-d {
+#bandeau .bandeau-g, #bandeau .bandeau-d, .bandeau-m {
     color: #fff;
     background-color: #4f9cd0;
     height: 60px;
@@ -521,10 +520,7 @@ html {
 }
 
 #bandeau .bandeau-m {
-    color: #fff;
     background-color: #1b85cd;
-    border-radius: 20px;
-    height: 60px;
 }
 
 #bandeau .bandeau-g h4, #bandeau .bandeau-g p, #bandeau .bandeau-d h4, #bandeau .bandeau-d p, #bandeau .bandeau-m h4, #bandeau .bandeau-m p {
@@ -534,7 +530,6 @@ html {
 #bandeau .bandeau-g h4, #bandeau .bandeau-m h4, #bandeau .bandeau-d h4 {
     font-weight: bold;
 }
-
 
 /* COMPETENCES */
 
@@ -791,12 +786,10 @@ article .progress, article .progress-bar {
 }
 
 #contact input {
-    width: 410px;
     height: 50px;
 }
 
 #contact textarea {
-    width: 437px;
     margin-bottom: 6px;
     height: 184px;
 }
@@ -822,34 +815,48 @@ article .progress, article .progress-bar {
 
 footer {
     background-color: #4f9cd0;
-    height: 46px;
     color: #fff;
+    overflow: hidden;
+    margin-top: 20px;
 }
 
-footer p {
-    position: relative;
-    top: 25%;
+footer .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 footer a {
     color: #fff;
 }
 
+
 /* MEDIA QUERIES */
 
-@media screen and (max-width:992px) {
-    #bandeau {
-        height: 380px;
-    }
-    #contact textarea {
-        width: 100%;
-    }
-    #contact button {
-        width: 100%;
-    }
-    #fondbleu h1, #fondbleu h2 {
-        font-size: 50px;
+@media screen and (max-width:540px) {
+    .competences .GrandTitre h1 {
+        font-size: 55px;
     }
 }
 
+@media screen and (max-width:650px) {
+    #menu .logo a {
+        font-size: 22px;
+    }
+    #fondbleu h1 {
+        margin-top: -10px;
+        font-size: 32px;
+    }
+    #fondbleu h2 {
+        font-size: 30px;
+    }
+}
+    @media screen and (max-width:768px) {
+    #fondbleu button {
+        margin-top: 100px;
+        width: 250px;
+        font-size: 20px;
+        height: 60px;
+    }
+}
 

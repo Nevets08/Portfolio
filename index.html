@@ -61,7 +61,7 @@
     <section id="fondbleu">
       <div class="container">
         <div class="row">
-          <div class="mt-5 ">
+          <div class="mt-5 col-10">
             <h1>Steven Robert</h1>
             <h2>developpeur web junior<span>.</span></h2>
             <button type="button" class="btn">Faisons connaissance !</button>
@@ -243,7 +243,7 @@
     <div class="container">
       <div class="row">
 
-        <div class="col-3">
+        <div class="col-xl-3 col-lg-4">
           <div class="card-img">
             <img src="Graphique/Integration/img-portfolio1.jpg" alt="Maquette graphique site de kas'fratz">
           </div>
@@ -259,7 +259,7 @@
           </div>
         </div>
 
-        <div class="col-3">
+        <div class="col-xl-3 col-lg-4">
           <div class="card-img">
             <img src="Graphique/Integration/img-portfolio2.jpg" alt="Refonte graphique site solus'immo">
           </div>
@@ -275,7 +275,7 @@
           </div>
         </div>
 
-        <div class="col-3">
+        <div class="col-xl-3 col-lg-4">
           <div class="card-img">
             <img src="Graphique/Integration/img-portfolio3.jpg" alt="Integration maquette front-end">
           </div>
@@ -290,7 +290,7 @@
           </div>
         </div>
 
-        <div class="col-3">
+        <div class="col-xl-3 col-lg-12 mt-lg-5 mt-xl-0">
           <div class="card-img">
             <img src="Graphique/Integration/img-portfolio4.jpg"
               alt="Integration back-end, base de données, site dynamique">
@@ -313,26 +313,26 @@
   </section>
 
   <section id="bandeau">
-    <div class="mt-5">
-      <div class="container">
-        <div class="col-12">
+    <div class="container">
+      <div class="col-12">
+        <div class="mt-5">
 
           <div class="row">
-            <div class="col-xl-4">
+            <div class="col-xl-4 col-sm-12">
               <div class="bandeau-g text-center mt-5">
                 <h4 class="text-uppercase pt-2">creation du design</h4>
                 <p class="mt-n1">Maquette du site, cahier des charges</p>
               </div>
             </div>
 
-            <div class="col-xl-4">
+            <div class="col-xl-4 col-sm-12">
               <div class="bandeau-m text-center mt-5">
                 <h4 class="text-uppercase pt-2">developpement du site</h4>
                 <p class="mt-n1">Codage, programmation, responsive</p>
               </div>
             </div>
 
-            <div class="col-xl-4">
+            <div class="col-xl-4 col-sm-12">
               <div class="bandeau-d text-center mt-5">
                 <h4 class="text-uppercase  pt-2">Maintenance</h4>
                 <p class="mt-n1">Nouvelles fonctionnalités, refonte design...</p>
@@ -566,31 +566,32 @@
           <p class="tirets mt-n5">- - -</p>
         </div>
 
+        <p class="mt-n4">Site en cours de developpement, le formulaire n'est pas encore operationnel</p>
+
       </div>
     </div>
     </div>
 
     <div class="container">
-      <p>Site en cours de developpement, le formulaire n'est pas encore operationnel</p>
-      <div class="row justify-content-start ml-1">
-        <div class="col-5">
+      <div class="row ml-1">
+        <div class="col-xl-5 mr-xl-4 col-sm-12">
           <form>
             <div class="form-group">
-              <input type="text" placeholder="Votre nom*" class="form-control" id="exampleInputEmail1"
-                aria-describedby="emailHelp" required>
+              <input type="name" placeholder="Votre nom*" class="form-control" id="exampleInputEmail1"
+                aria-describedby="emailHelp" required readonly>
             </div>
             <div class="form-group">
-              <input type="tel" placeholder="Votre téléphone" class="form-control" id="exampleInputPassword1" required>
+              <input type="tel" placeholder="Votre téléphone" class="form-control" id="exampleInputPassword1" required readonly>
             </div>
             <div class="form-group">
-              <input type="email" placeholder="Votre email*" class="form-control" id="exampleInputPassword1" required>
+              <input type="email" placeholder="Votre email*" class="form-control" id="exampleInputPassword1" required readonly>
             </div>
             <div class="form-group">
-              <input type="tel" placeholder="Votre sujet*" class="form-control" id="exampleInputPassword1" required>
+              <input type="text" placeholder="Votre sujet*" class="form-control" id="exampleInputPassword1" required readonly>
             </div>
         </div>
 
-        <div class="col-xl-5 ml-sm-0 ml-xl-n5">
+        <div class="col-xl-5 ml-xl-n5">
           <textarea class="form-control" placeholder="Votre message*" id="exampleFormControlTextarea1" rows="3"
             required></textarea>
           <button type="submit" class="btn btn-primary mt-2">Envoyer</button>
@@ -598,9 +599,16 @@
         </div>
       </div>
 
-      <a href="mailto:stevenrobert08@gmail.com" class="mt-5 ml-4"><i
-          class="far fa-envelope mr-2"></i>stevenrobert08@gmail.com</a>
-      <a class="ml-5" href="tel:+33612673774"><i class="fas fa-phone-alt mr-2"></i>06 12 67 37 74</a>
+      <div class="container">
+        <div class="row ml-n2 mt-2">
+          <div class="col-md-4 col-sm-12">
+            <a href="mailto:stevenrobert08@gmail.com"><i class="far fa-envelope mr-2"></i>stevenrobert08@gmail.com</a>
+          </div>
+          <div class="col-md-4 col-sm-12">
+            <a href="tel:+33612673774"><i class="fas fa-phone-alt mr-2"></i>06 12 67 37 74</a>
+          </div>
+        </div>
+      </div>
 
     </div>
   </section>
@@ -608,10 +616,10 @@
   <!-- FOOTER -->
 
   <footer>
-    <div class="container-fluid col-12 mt-5 d-flex justify-content-center">
+    <div class="container">
       <div class="row">
-        <div class="">
-          <p>&copy; Conception et réalisation par <a href="#">Steven ROBERT</a> - Tous droits réservés</p>
+        <div class="col-12 mt-2">
+          <p class="text-center">&copy; Conception et réalisation par <a href="#">Steven ROBERT</a> - Tous droits réservés</p>
         </div>
       </div>
     </div>
