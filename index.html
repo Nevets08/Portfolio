@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description"
+    content="Je m'appelle Steven ROBERT, j'ai 21 ans et je suis développeur web junior à Mulhouse. Voici mon site web portfolio et mon CV.">
   <title>Steven ROBERT : Developpeur web - Webdesigner</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -59,14 +61,15 @@
     </section>
 
     <section id="fondbleu">
-      <div class="container">
+      <div class="container col-10">
         <div class="row">
-          <div class="mt-5 col-10">
+          <div class="mt-5">
             <h1>Steven Robert</h1>
             <h2>developpeur web junior<span>.</span></h2>
             <button type="button" class="btn">Faisons connaissance !</button>
           </div>
         </div>
+      </div>
     </section>
   </header>
 
@@ -124,7 +127,7 @@
               aussi à une <strong> veille
                 technologique active.</strong></p>
             <p class="mb-2">Mon objectif ?<strong> Devenir developpeur full-stack JS.</strong></p>
-            <a href="Pages/CV Steven ROBERT.pdf" download="CV" type="button" class="btn gauche mb-5">Télécharger mon
+            <a href="Pages/CV_Steven_ROBERT.pdf" download="CV" class="btn gauche mb-5">Télécharger mon
               CV</a>
           </article>
         </div>
@@ -225,8 +228,6 @@
 
         </div>
       </div>
-    </div>
-    </div>
     </div>
   </section>
 
@@ -378,7 +379,7 @@
             <div class="progress mb-3">
               <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="35" aria-valuemin="0"
                 aria-valuemax="100"></div>
-              <span class="progress-type mt-1 ml-2"><i class="fab fa-js-square"></i> Javascript</span>
+              <span class="progress-type mt-1 ml-2"><i class="fab fa-js-square"></i> Javascript ES6+</span>
             </div>
           </article>
 
@@ -402,9 +403,8 @@
           <article id="wordpress">
             <div class="progress mb-3">
               <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="50" aria-valuemin="0"
-                aria-valuemax="100"></span></div>
-              <span class="progress-type mt-1 ml-2"><i class="fab fa-wordpress"></i> WordPress<span
-                  class="framework"></span></span>
+                aria-valuemax="100"></div>
+              <span class="progress-type mt-1 ml-2"><i class="fab fa-wordpress"></i> WordPress</span>
             </div>
           </article>
 
@@ -444,7 +444,6 @@
 
         </div>
       </div>
-    </div>
     </div>
   </section>
 
@@ -570,32 +569,30 @@
 
       </div>
     </div>
-    </div>
 
     <div class="container">
       <div class="row ml-1">
         <div class="col-xl-5 mr-xl-4 col-sm-12">
           <form>
             <div class="form-group">
-              <input type="name" placeholder="Votre nom*" class="form-control" id="exampleInputEmail1"
-                aria-describedby="emailHelp" required readonly>
+              <input type="text" placeholder="Votre nom*" class="form-control" required>
             </div>
             <div class="form-group">
-              <input type="tel" placeholder="Votre téléphone" class="form-control" id="exampleInputPassword1" required readonly>
+              <input type="tel" placeholder="Votre téléphone" class="form-control" required>
             </div>
             <div class="form-group">
-              <input type="email" placeholder="Votre email*" class="form-control" id="exampleInputPassword1" required readonly>
+              <input type="email" placeholder="Votre email*" class="form-control" required>
             </div>
             <div class="form-group">
-              <input type="text" placeholder="Votre sujet*" class="form-control" id="exampleInputPassword1" required readonly>
+              <input type="text" placeholder="Votre sujet*" class="form-control" required>
             </div>
+          </form>
         </div>
 
         <div class="col-xl-5 ml-xl-n5">
-          <textarea class="form-control" placeholder="Votre message*" id="exampleFormControlTextarea1" rows="3"
-            required></textarea>
+          <textarea class="form-control" placeholder="Votre message*" id="exampleFormControlTextarea1" rows="3" required
+            readonly></textarea>
           <button type="submit" class="btn btn-primary mt-2">Envoyer</button>
-          </form>
         </div>
       </div>
 
@@ -619,7 +616,8 @@
     <div class="container">
       <div class="row">
         <div class="col-12 mt-2">
-          <p class="text-center">&copy; Conception et réalisation par <a href="#">Steven ROBERT</a> - Tous droits réservés</p>
+          <p class="text-center">&copy; Conception et réalisation par <a href="#">Steven ROBERT</a> - Tous droits
+            réservés</p>
         </div>
       </div>
     </div>
@@ -627,8 +625,19 @@
 
   <script src="js/loading.js"></script>
   <script src="js/animate.js"></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-167602791-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
+    gtag('config', 'UA-167602791-1');
+  </script>
+
+  <!-- Font awesome -->
   <script src="https://use.fontawesome.com/releases/v5.12.0/js/all.js" data-auto-replace-svg="nest"></script>
+  <!-- Bootstrap -->
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
     crossorigin="anonymous"></script>

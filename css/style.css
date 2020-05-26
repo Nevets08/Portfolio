@@ -61,7 +61,7 @@ html {
     font-size: 20px;
     color: #fff;
     margin-left: 5px;
-    animation: slide-right-menu 1s ease-in-out forwards;
+    animation: slide-right-menu 2s ease-in-out forwards;
 }
 
 @keyframes slide-right-menu {
@@ -132,8 +132,19 @@ html {
     color: #1b85cd;
 }
 
+
 #fondbleu, header {
     background-color: #4F9CD0;
+    /* animation: slide-fondbleu 1.2s ease-in-out forwards; */
+}
+
+@keyframes slide-fondbleu {
+    0% {
+        transform: translateY(100vh);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
 
 #fondbleu button {
@@ -144,7 +155,7 @@ html {
     height: 70px;
     border-radius: 50px;
     margin-top: 10%;
-    animation: slide-right-header 1s ease-in-out forwards;
+    animation: slide-right-header 2s ease-in-out forwards;
     box-shadow: 2px 2px 23px -9px rgba(0,0,0,0.75);
 }
 
@@ -300,6 +311,7 @@ html {
 #Apropos .card button.droite:hover {
     transform: scale(1.03);
     transition: 0.3s;
+    box-shadow: 2px 2px 15px -9px rgba(0,0,0,0.75);
 }
 
 #Apropos .card button.droite:active {
@@ -337,6 +349,10 @@ html {
 
 .progression {
     margin-top: -18px;
+}
+
+#description p {
+    margin-left: -15px;
 }
 
 #description .progress {
@@ -415,13 +431,6 @@ html {
 .gras {
     font-weight: bold;
 }
-
-/*
-.modal-body, .modal-footer, .modal-header {
-    background-color: #4f9cd0;
-    color: #fff;
-} 
-*/
 
 .modal-footer button {
     background-color: #1b85cd;
@@ -507,16 +516,25 @@ html {
 /* BANDEAU */
 
 #bandeau {
-    background-color: #b0d2ea;
+    background-color: #4f9cd0;
     opacity: 45%;
-    margin-top: 110px;
+    margin-top: 8%;
+    margin-bottom: 6%;
+    transform: skewY(3deg);
+    height: 150px;
 }
 
 #bandeau .bandeau-g, #bandeau .bandeau-d, .bandeau-m {
     color: #fff;
-    background-color: #4f9cd0;
+    background-color: #1b85cd;
     height: 60px;
     border-radius: 20px;
+    transform: skewY(-3deg);
+}
+
+#bandeau .bandeau-g:hover, #bandeau .bandeau-d:hover, .bandeau-m:hover {
+    transform: translateY(-5px);
+    transition: all 0.3s;
 }
 
 #bandeau .bandeau-m {

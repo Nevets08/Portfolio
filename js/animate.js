@@ -11,53 +11,66 @@ window.addEventListener('scroll', () => {
         btnTopScroll.classList.add('hidden');
     };
 });
+
 // Ramene en haut de la page quand on clique sur le button
 btnTopScroll.addEventListener('click', () => {
-    window.scrollTo(0, 0);
+    scrollPosition('#menu');
 });
 
 /* MENU SCROLL TO SECTION */
+
+/*
+*   find the position of the tag and scroll to
+*
+*   @param {selector} querySelector
+*/
+function scrollPosition(selector) {
+    const selectorTag = document.querySelector(selector)
+    const selectorPosition = selectorTag.getBoundingClientRect().top;
+    
+    window.scrollTo(0, selectorPosition);
+}
 
 // A propos
 const menuAboutSelector = document.querySelector('#menu ul li:nth-child(2)');
 
 menuAboutSelector.addEventListener('click', () => {
-    window.scrollTo(0, 860);
+    scrollPosition('#cartes');
 });
 
 // Portfolio
 const menuPortfolioSelector = document.querySelector('#menu ul li:nth-child(3)');
 
 menuPortfolioSelector.addEventListener('click', () => {
-    window.scrollTo(0, 1850);
+    scrollPosition('.portfolio');
 });
 
 // Competences
 const menuSkillsSelector = document.querySelector('#menu ul li:nth-child(4)');
 
 menuSkillsSelector.addEventListener('click', () => {
-    window.scrollTo(0, 2500);
+    scrollPosition('.competences');
 });
 
 // Parcours
 const menuSchoolSelector = document.querySelector('#menu ul li:nth-child(5)');
 
 menuSchoolSelector.addEventListener('click', () => {
-    window.scrollTo(0, 3360);
+    scrollPosition('#parcours');
 });
 
 // Contact
 const menuContactSelector = document.querySelector('#menu ul li:nth-child(6)');
 
 menuContactSelector.addEventListener('click', () => {
-    window.scrollTo(0, 5700);
+    scrollPosition('#contact');
 });
 
 // Button "faisons connaissance !"
 const buttonKnowSelector = document.querySelector('#fondbleu button');
 
 buttonKnowSelector.addEventListener('click', () => {
-    window.scrollTo(0, 860);
+    scrollPosition('#cartes');
 });
 
 // APROPOS -> Button "Télécharger mon CV" -> MOUSEOVER -> apparait une icone
@@ -82,7 +95,7 @@ invocationButton.addEventListener('click', () => {
 
 /* TITLE ANIMATION */
 
-const titleAboutSelector = document.querySelector('#Apropos h1')
+const titleAboutSelector = document.querySelector('#Apropos h1');
 
 window.addEventListener('scroll', () => {
     if (window.pageYOffset > 500) {
@@ -93,64 +106,52 @@ window.addEventListener('scroll', () => {
 });
 
 
-/* CAPACITY ANIMATION TRIGGER KEYFRAME ON SCROLL = 750 */
+/*
+*   find the position of the tag when it is shown on scroll, trigger a css animation by adding an id
+*
+*   @param {idSelector} the html tag needed to add the id
+*   @param {idEdit}     select the id and add it to the html tag for animation css
+*/
+function scrollId(idSelector, idEdit) {
+    // Edit the id
+    const targetId = document.querySelector(idSelector);
+    
+    // Find the position of the page
+    const targetPositonTag = document.querySelector(idSelector);
+    const targetPosition = targetPositonTag.getBoundingClientRect().top; 
 
-const firstProgressBarCapacity = document.querySelector('#creative .progress-bar');
-const secondProgressBarCapacity = document.querySelector('#technical .progress-bar');
-const thirdProgressBarCapacity = document.querySelector('#intrepid .progress-bar');
-const fourthProgressBarCapacity = document.querySelector('#patience .progress-bar');
+    if (targetPosition < window.innerHeight) {
+        targetId.id = idEdit;
+    } else {
+        targetId.removeAttribute('id');
+    }
+
+    console.log(targetPosition)
+    console.log(window.innerHeight)
+}
+
+/* CAPACITY ANIMATION TRIGGER KEYFRAME ON SCROLL */
 
 window.addEventListener('scroll', () => {
-    if (window.pageYOffset > 750) {
-        firstProgressBarCapacity.id = 'firstProgression';
-        secondProgressBarCapacity.id = 'secondProgression';
-        thirdProgressBarCapacity.id = 'thirdProgression';
-        fourthProgressBarCapacity.id = 'fourthProgression';
-    } else {
-        firstProgressBarCapacity.removeAttribute('id');
-        secondProgressBarCapacity.removeAttribute('id');
-        thirdProgressBarCapacity.removeAttribute('id');
-        fourthProgressBarCapacity.removeAttribute('id');
-    };
+    scrollId('#creative .progress-bar', 'firstProgression');
+    scrollId('#technical .progress-bar', 'secondProgression');
+    scrollId('#intrepid .progress-bar', 'thirdProgression');
+    scrollId('#patience .progress-bar', 'fourthProgression');
 });
 
-/* COMPETENCES -> ANIMATION ACTIVE KEYFRAMES ON SCROLL = 2200 */
-
-const htmlProgressBar = document.querySelector('.competences #html .progress-bar');
-const cssProgressBar = document.querySelector('.competences #css .progress-bar');
-const jsProgressBar = document.querySelector('.competences #js .progress-bar');
-const reactProgressbar = document.querySelector('.competences #react .progress-bar');
-const wordpressProgressBar = document.querySelector('.competences #wordpress .progress-bar');
-const photoshopProgressBar = document.querySelector('.competences #photoshop .progress-bar');
-const EnglishProgressBar = document.querySelector('.competences #anglais .progress-bar');
-const redactionProgressBar = document.querySelector('.competences #redaction .progress-bar');
-const integrationProgressBar = document.querySelector('.competences #integration .progress-bar');
-const nodeProgressionBar = document.querySelector('.competences #node .progress-bar');
+/* COMPETENCES -> ANIMATION ACTIVE KEYFRAMES ON SCROLL */
 
 window.addEventListener('scroll', () => {
-    if (window.pageYOffset > 2200) {
-        htmlProgressBar.id = 'htmlProgression';
-        cssProgressBar.id = 'cssProgression';
-        jsProgressBar.id = 'jsProgression';
-        reactProgressbar.id = 'reactProgression';
-        wordpressProgressBar.id = 'wordpressProgression';
-        photoshopProgressBar.id = 'photoshopProgression';
-        EnglishProgressBar.id = 'englishProgression';
-        redactionProgressBar.id = 'redactionProgression';
-        integrationProgressBar.id = 'integrationProgression';
-        nodeProgressionBar.id = 'nodeProgression';
-    } else {
-        htmlProgressBar.removeAttribute('id');
-        cssProgressBar.removeAttribute('id');
-        jsProgressBar.removeAttribute('id');
-        reactProgressbar.removeAttribute('id');
-        wordpressProgressBar.removeAttribute('id');
-        photoshopProgressBar.removeAttribute('id');
-        EnglishProgressBar.removeAttribute('id');
-        redactionProgressBar.removeAttribute('id');
-        integrationProgressBar.removeAttribute('id');
-        nodeProgressionBar.removeAttribute('id');
-    };
+    scrollId('#html .progress-bar', 'cssProgression');
+    scrollId('#css .progress-bar', 'cssProgression');
+    scrollId('#js .progress-bar', 'jsProgression');
+    scrollId('#node .progress-bar', 'nodeProgression');
+    scrollId('#react .progress-bar', 'reactProgression');
+    scrollId('#wordpress .progress-bar', 'wordpressProgression');
+    scrollId('#photoshop .progress-bar', 'photoshopProgression');
+    scrollId('#anglais .progress-bar', 'englishProgression');
+    scrollId('#redaction .progress-bar', 'redactionProgression');
+    scrollId('#integration .progress-bar', 'integrationProgression');
 });
 
 /* PORTFOLIO -> ANIMATION ACTIVE KEYFRAMES ON MOUSEOVER */
