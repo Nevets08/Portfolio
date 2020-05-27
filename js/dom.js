@@ -3,19 +3,39 @@
 const btnTopScroll = document.getElementById('btnScrollTop');
 // Affiche le button quand page > 400px
 window.addEventListener('scroll', () => {
-    if (window.pageYOffset > 400) {
-        btnTopScroll.classList.add('show');
-        btnTopScroll.classList.remove('hidden');
-    } else {
-        btnTopScroll.classList.remove('show');
-        btnTopScroll.classList.add('hidden');
-    };
+    scrollAnimate(400, 'show', 'hidden', btnTopScroll);
+});
+
+const socialScroll = document.getElementById('social-media');
+// Affiche les reseaux sociaux quand page > 400px
+window.addEventListener('scroll', () => {
+    scrollAnimate(500, 'show-social', 'hidden', socialScroll);
 });
 
 // Ramene en haut de la page quand on clique sur le button
 btnTopScroll.addEventListener('click', () => {
     scrollPosition('#menu');
 });
+
+/* SHOW ON SCROLL */
+
+/*
+*   show or hide the element html depending the scroll value
+*
+*   @param {scrollValue} value of the scroll
+*   @param {showClass} class show added/removed to 'selectorClass'
+*   @param {hiddenClass} class hidden added/removed to 'selectorClass'
+*   @param {selectorClass} the html tag who needs the class
+*/
+function scrollAnimate(scrollValue, showClass, hiddenClass, selectorClass) {
+    if (window.pageYOffset > scrollValue) {
+        selectorClass.classList.add(showClass);
+        selectorClass.classList.remove(hiddenClass);
+    } else {
+        selectorClass.classList.remove(showClass);
+        selectorClass.classList.add(hiddenClass);
+    };
+}
 
 /* MENU SCROLL TO SECTION */
 
@@ -87,10 +107,10 @@ buttonDownloadCv.addEventListener('mouseout', () => {
 
 // APROPOS -> Button "Invoquer" -> Click, scroll to bottom of the page
 
-const invocationButton = document.querySelector('#Apropos .card button.droite');
+const invocationButton = document.querySelector('footer');
 
 invocationButton.addEventListener('click', () => {
-    window.scrollTo(0, 6000);
+    window.scrollTo(0, 60000);
 });
 
 /* TITLE ANIMATION */
@@ -98,13 +118,18 @@ invocationButton.addEventListener('click', () => {
 const titleAboutSelector = document.querySelector('#Apropos h1');
 
 window.addEventListener('scroll', () => {
-    if (window.pageYOffset > 500) {
-        titleAboutSelector.classList.add('grandTitre-animate');
-    } else {
-        titleAboutSelector.classList.remove('grandTitre-animate');
-    };
+    scrollId('#creative .progress-bar', 'firstProgression');
 });
 
+/* TITLE ANIMATION */
+
+window.addEventListener('scroll', () => {
+    scrollId('#Apropos h1', 'title-animate');
+    scrollId('.portfolio h1', 'title-animate');
+    scrollId('.competences h1', 'title-animate');
+    scrollId('#parcours h1', 'title-animate');
+    scrollId('#contact h1', 'title-animate');  
+});
 
 /*
 *   find the position of the tag when it is shown on scroll, trigger a css animation by adding an id
@@ -125,9 +150,6 @@ function scrollId(idSelector, idEdit) {
     } else {
         targetId.removeAttribute('id');
     }
-
-    console.log(targetPosition)
-    console.log(window.innerHeight)
 }
 
 /* CAPACITY ANIMATION TRIGGER KEYFRAME ON SCROLL */
@@ -142,7 +164,7 @@ window.addEventListener('scroll', () => {
 /* COMPETENCES -> ANIMATION ACTIVE KEYFRAMES ON SCROLL */
 
 window.addEventListener('scroll', () => {
-    scrollId('#html .progress-bar', 'cssProgression');
+    scrollId('#html .progress-bar', 'htmlProgression');
     scrollId('#css .progress-bar', 'cssProgression');
     scrollId('#js .progress-bar', 'jsProgression');
     scrollId('#node .progress-bar', 'nodeProgression');
