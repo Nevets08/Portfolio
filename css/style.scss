@@ -105,7 +105,7 @@ html {
     font-size: 20px;
     color: #fff;
     margin-left: 5px;
-    animation: slide-right-menu 2s ease-in-out forwards;
+    animation: slide-right-menu 1.5s ease-in-out forwards;
 }
 
 @keyframes slide-right-menu {
@@ -146,7 +146,7 @@ html {
 
 /* FOND BLEU */ 
 
-#fondbleu .container {
+#fondbleu {
     display: flex;
     justify-content: center;
     height: 90vh;
@@ -194,7 +194,7 @@ html {
     height: 70px;
     border-radius: 50px;
     margin-top: 10%;
-    animation: slide-right-header 2s ease-in-out forwards;
+    animation: slide-right-header 1.5s ease-in-out forwards;
     box-shadow: 2px 2px 23px -9px rgba(0,0,0,0.75);
 }
 
@@ -488,7 +488,7 @@ html {
 .card-img img {
     border-radius: 20px;
     box-shadow: 2px 2px 23px -9px rgba(0,0,0,0.75);
-    width: 220px;
+    width: 80%;
 }
 
 .card-img {
@@ -509,7 +509,7 @@ html {
 }
 
 .infos-portfolio-animate {
-    animation: slide-up-portfolio 0.5s ease-in-out forwards;
+    animation: slide-up-portfolio 0.45s ease-in-out forwards;
 }
 
 @keyframes slide-up-portfolio {
@@ -557,6 +557,11 @@ html {
 .infos-portfolio a:active {
     transform: scale(0.90);
     transition: 0.2s;
+}
+
+.cardimg-opacity {
+    opacity: 0.4;
+    transition: all 0.4s;
 }
 
 /* BANDEAU */
@@ -631,26 +636,7 @@ html {
     to {
       width: 60%;
     }
-  } 
-
-  
-#node .progress-bar {
-    background-color: #27AE60;
-    width: 0;
-}
-    
-#nodeProgression {
-    animation: progress-node 1.2s ease-in-out forwards;
-}
-    
-    @keyframes progress-node {
-        from {
-            width: 0;
-        }
-        to {
-            width: 100%;
-        }
-    } 
+  }
     
 #js .progress-bar {
     background-color: #F7DC6F;
@@ -688,7 +674,7 @@ html {
     }
   } 
 
-.progress-bar .loading {
+.progress-bar #reactLoading {
     font-size: 16px;
 }
 
@@ -921,6 +907,26 @@ footer a {
         width: 250px;
         font-size: 20px;
         height: 60px;
+    }
+    .GrandTitre h1 {
+        font-size: 60px;
+        font-weight: bold;
+    }
+    #Apropos a.gauche {
+        margin-top: 35px;
+        width: 100%;
+    }
+    #fondbleu {
+        height: 70vh;
+    } 
+    #description img {
+        width: 130px;
+    }
+    .card-img img {
+        margin-left: 3.2vh;
+    }
+    .container-card {
+        margin-bottom: 220px;
     }
 }
 

@@ -1,55 +1,59 @@
 /* COMPENTENCES */
 
-const loadingSelector = document.getElementsByClassName('loading');
-
 /*
 *   loading animation with dots
 *
 *   @param {wordContent} the word needed to be shown
 *   @param {time}        timeout for setInterval
 */
-function loadingDots(wordContent, time) {
-    for (let i = 0; i < loadingSelector.length; i++) {
-        setInterval(() => {
-            if (loadingSelector[i].innerHTML === wordContent) {
-                loadingSelector[i].innerHTML = wordContent + '.';
-            } else if (loadingSelector[i].innerHTML === wordContent + '.') {
-                loadingSelector[i].innerHTML = wordContent + '..';
-            } else if (loadingSelector[i].innerHTML === wordContent + '..') {
-                loadingSelector[i].innerHTML = wordContent + '...';
-            } else {
-                loadingSelector[i].innerHTML = wordContent;
-            }
-        }, time);
-    }
+function loadingDots(wordContent, time, selector) {
+    const htmlSelector = document.getElementById(selector);
+
+    setInterval(() => {
+        if (htmlSelector.innerHTML === wordContent) {
+            htmlSelector.innerHTML = wordContent + '.';
+        } else if (htmlSelector.innerHTML === wordContent + '.') {
+            htmlSelector.innerHTML = wordContent + '..';
+        } else if (htmlSelector.innerHTML === wordContent + '..') {
+            htmlSelector.innerHTML = wordContent + '...';
+        } else {
+            htmlSelector.innerHTML = wordContent;
+        }
+    }, time);
 }
 
-loadingDots('Prochainement', 800);
+loadingDots('Prochainement', 800, 'reactLoading');
 
 /* ABOUT CARD AGE */
 
 /*
-*   Update the age with birthdate
+*   Update the age with birthdate and today date
 *
-*   @param {} 
-*   @param {}        
+*   @param {birth}      birthDate 
+*   @param {selector}   querySelector      
 */
-const age = document.querySelector('#niveau ul li:last-child');
-const dateBirth = new Date('February 15 1999')
-const dateToday = new Date('Ferbuary 15 2012');
+function updateAge(birth, selector) {
+    const htmlSelector = document.querySelector(selector);
 
-let yearBirth = dateToday.getFullYear() - dateBirth.getFullYear();
-const monthBirth = dateToday.getMonth() - dateBirth.getMonth();
-const dayBirth = dateToday.getDate() - dateBirth.getDate();
+    const birthDate = new Date(birth);
 
-function ageAutomatise() {
+    const monthBirthDate = birthDate.getMonth();
+    const dayBirthDate = birthDate.getDate();
+    const yearBirthDate = birthDate.getFullYear();
 
+    const todayDate = new Date();
 
-age.innerHTML = yearBirth;
+    const monthTodayDate = todayDate.getMonth();
+    const dayTodayDate = todayDate.getDate();
+    const yearTodayDate = todayDate.getFullYear();
 
-  console.log(yearBirth)
-  console.log(monthBirth + 1)
-  console.log(dayBirth)
-} 
+    let diffDate = yearTodayDate - yearBirthDate;
 
-ageAutomatise();
+    if (monthBirthDate >= 1 && monthTodayDate >= 1 && dayBirthDate >= 15 && dayTodayDate >= 15) {
+        diffDate++;
+    }
+
+    htmlSelector.innerHTML = diffDate - 1;
+}
+
+updateAge('February 15 1999', '#niveau ul li:last-child');

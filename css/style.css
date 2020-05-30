@@ -141,8 +141,8 @@ html {
   font-size: 20px;
   color: #fff;
   margin-left: 5px;
-  -webkit-animation: slide-right-menu 2s ease-in-out forwards;
-          animation: slide-right-menu 2s ease-in-out forwards;
+  -webkit-animation: slide-right-menu 1.5s ease-in-out forwards;
+          animation: slide-right-menu 1.5s ease-in-out forwards;
 }
 
 @-webkit-keyframes slide-right-menu {
@@ -195,7 +195,7 @@ html {
 }
 
 /* FOND BLEU */
-#fondbleu .container {
+#fondbleu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -259,8 +259,8 @@ html {
   height: 70px;
   border-radius: 50px;
   margin-top: 10%;
-  -webkit-animation: slide-right-header 2s ease-in-out forwards;
-          animation: slide-right-header 2s ease-in-out forwards;
+  -webkit-animation: slide-right-header 1.5s ease-in-out forwards;
+          animation: slide-right-header 1.5s ease-in-out forwards;
   -webkit-box-shadow: 2px 2px 23px -9px rgba(0, 0, 0, 0.75);
           box-shadow: 2px 2px 23px -9px rgba(0, 0, 0, 0.75);
 }
@@ -639,7 +639,7 @@ html {
   border-radius: 20px;
   -webkit-box-shadow: 2px 2px 23px -9px rgba(0, 0, 0, 0.75);
           box-shadow: 2px 2px 23px -9px rgba(0, 0, 0, 0.75);
-  width: 220px;
+  width: 80%;
 }
 
 .card-img {
@@ -660,8 +660,8 @@ html {
 }
 
 .infos-portfolio-animate {
-  -webkit-animation: slide-up-portfolio 0.5s ease-in-out forwards;
-          animation: slide-up-portfolio 0.5s ease-in-out forwards;
+  -webkit-animation: slide-up-portfolio 0.45s ease-in-out forwards;
+          animation: slide-up-portfolio 0.45s ease-in-out forwards;
 }
 
 @-webkit-keyframes slide-up-portfolio {
@@ -727,6 +727,12 @@ html {
           transform: scale(0.9);
   -webkit-transition: 0.2s;
   transition: 0.2s;
+}
+
+.cardimg-opacity {
+  opacity: 0.4;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
 }
 
 /* BANDEAU */
@@ -825,34 +831,6 @@ html {
   }
 }
 
-#node .progress-bar {
-  background-color: #27AE60;
-  width: 0;
-}
-
-#nodeProgression {
-  -webkit-animation: progress-node 1.2s ease-in-out forwards;
-          animation: progress-node 1.2s ease-in-out forwards;
-}
-
-@-webkit-keyframes progress-node {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-@keyframes progress-node {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-
 #js .progress-bar {
   background-color: #F7DC6F;
   width: 0;
@@ -909,7 +887,7 @@ html {
   }
 }
 
-.progress-bar .loading {
+.progress-bar #reactLoading {
   font-size: 16px;
 }
 
@@ -1198,6 +1176,26 @@ footer a {
     width: 250px;
     font-size: 20px;
     height: 60px;
+  }
+  .GrandTitre h1 {
+    font-size: 60px;
+    font-weight: bold;
+  }
+  #Apropos a.gauche {
+    margin-top: 35px;
+    width: 100%;
+  }
+  #fondbleu {
+    height: 70vh;
+  }
+  #description img {
+    width: 130px;
+  }
+  .card-img img {
+    margin-left: 3.2vh;
+  }
+  .container-card {
+    margin-bottom: 220px;
   }
 }
 /*# sourceMappingURL=style.css.map */
