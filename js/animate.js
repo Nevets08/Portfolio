@@ -13,7 +13,7 @@ function scrollAnimate(scrollValue, showClass, hiddenClass, selectorClass) {
     } else {
         selectorClass.classList.remove(showClass);
         selectorClass.classList.add(hiddenClass);
-    };
+    }
 }
 
 /*
@@ -126,7 +126,7 @@ buttonDownloadCv.addEventListener('mouseout', () => {
 
 // APROPOS -> Button "Invoquer" -> Click, scroll to bottom of the page
 
-const invocationButton = document.querySelector('footer');
+const invocationButton = document.querySelector('#buttonInvocation');
 
 invocationButton.addEventListener('click', () => {
     window.scrollTo(0, 60000);

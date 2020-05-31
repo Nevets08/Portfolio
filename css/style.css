@@ -730,7 +730,7 @@ html {
 }
 
 .cardimg-opacity {
-  opacity: 0.4;
+  opacity: 0.2;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
@@ -739,11 +739,11 @@ html {
 #bandeau {
   background-color: #4f9cd0;
   opacity: 45%;
-  margin-top: 8%;
+  margin-top: 12%;
   margin-bottom: 6%;
   -webkit-transform: skewY(3deg);
           transform: skewY(3deg);
-  height: 150px;
+  padding-bottom: 50px;
 }
 
 #bandeau .bandeau-g, #bandeau .bandeau-d, .bandeau-m {
@@ -1159,10 +1159,9 @@ footer a {
 
 @media screen and (max-width: 650px) {
   #menu .logo a {
-    font-size: 22px;
+    font-size: 5vw;
   }
   #fondbleu h1 {
-    margin-top: -10px;
     font-size: 32px;
   }
   #fondbleu h2 {
@@ -1173,7 +1172,7 @@ footer a {
 @media screen and (max-width: 768px) {
   #fondbleu button {
     margin-top: 100px;
-    width: 250px;
+    width: 300px;
     font-size: 20px;
     height: 60px;
   }
@@ -1196,6 +1195,13 @@ footer a {
   }
   .container-card {
     margin-bottom: 220px;
+  }
+  #utilisation .gras {
+    font-size: 18px;
+  }
+  #Apropos .card button.droite {
+    width: 100%;
+    margin-left: 15px;
   }
 }
 /*# sourceMappingURL=style.css.map */
