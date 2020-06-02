@@ -53,7 +53,7 @@ function updateAge(birth, selector) {
         diffDate++;
     }
 
-    htmlSelector.innerHTML = diffDate - 1;
+    htmlSelector.innerHTML = diffDate;
 }
 
 updateAge('February 15 1999', '#niveau ul li:last-child');

@@ -636,7 +636,7 @@ html {
 
 /* PORTFOLIO */
 .card-img img {
-  border-radius: 20px;
+  border-radius: 15px;
   -webkit-box-shadow: 2px 2px 23px -9px rgba(0, 0, 0, 0.75);
           box-shadow: 2px 2px 23px -9px rgba(0, 0, 0, 0.75);
   width: 80%;
@@ -667,8 +667,8 @@ html {
 @-webkit-keyframes slide-up-portfolio {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(100px);
-            transform: translateY(100px);
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
   }
   100% {
     opacity: 1;
@@ -680,8 +680,8 @@ html {
 @keyframes slide-up-portfolio {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(100px);
-            transform: translateY(100px);
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
   }
   100% {
     opacity: 1;
